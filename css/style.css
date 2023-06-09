@@ -1,0 +1,25 @@
+h2 {
+    color: green;
+}
+
+#title {
+    margin-top: 30px;
+}
+
+.hedder-main {
+    color: brown;
+    border-radius: 10%;
+    background-color: rgba(65, 39, 88, 0.315);
+}
+
+header {
+    background-color: rgba(114, 194, 10, 0.397);
+}
+
+main {
+    background-color: whitesmoke;
+}
+
+footer {
+    background-color: rgba(114, 194, 10, 0.397);
+}
