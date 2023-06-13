@@ -23,3 +23,16 @@ main {
 footer {
     background-color: rgba(114, 194, 10, 0.397);
 }
+
+.social-links > li {
+    color: rgb(199, 183, 38);
+}
+
+.sub-social-links a {
+    color: rgb(155, 77, 96);
+}
+
+.sub-social-links:hover a {
+    color: rgb(53, 6, 97);
+    border: 3px solid tomato;
+}
