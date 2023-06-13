@@ -28,11 +28,27 @@ footer {
     color: rgb(199, 183, 38);
 }
 
-.sub-social-links a {
-    color: rgb(155, 77, 96);
+.social-links .link:hover a {
+    border: 3px solid tomato;
 }
 
-.sub-social-links:hover a {
-    color: rgb(53, 6, 97);
+.social-links .link:active a {
+    color: gray;
+}
+
+.social-links .link:hover a
+.social-links .link:focus a {
+    color: green;
+}
+
+.social-links .sub-social-links {
+    color: rgb(199, 183, 38);
+}
+
+.social-links .sub-social-links:hover a {
     border: 3px solid tomato;
+}
+
+.social-links .sub-social-links:active a {
+    color: gray;    
 }
