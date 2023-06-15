@@ -5,38 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сховище жаби</title>
+    
+    <!-- modern-normalize -->
+    <link href=" https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css " rel="stylesheet">
+    
+    <!-- my styles -->
     <link rel="stylesheet" href="./css/style.css"/>
+    
+    <!-- font Roboto Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    
+    <!-- font Bebas Neue -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <boby>
-    <!--Шапка сторінки-->
     <header>
-        <a
+        <a class="first-logo-part link"
             href=""
             target="_self">
-                логотим сайту
-                <img
-                    src=""
-                    alt=""
-                />
+                логотип <span class="second-logo-part link">сайту</span>
         </a>
         <!--навігація-->
         <nav>
             <ul>
-                <li>
+                <li class="ul-li-styles">
                     <a 
                         href="#aboutToads"
                         target="_self">
                            Види жаб 
                     </a>
                 </li>
-                <li>
+                <li class="ul-li-styles">
                     <a 
                         href="#instructionForToads"
                         target="_self">
                             Інструкція для жаб
                     </a>
                 </li>
-                <li>
+                <li class="ul-li-styles">
                     <a 
                         href="#whereTheFindToad"
                         target="_self">
@@ -47,25 +57,11 @@
         </nav>
     </header>
 
-    <section>
-        <h2>
-            <ul class="social-links">
-                <li class="link"><a href="">Telegram</a></li>
-                <li class="link"><a href="">Discord</a></li>
-                <li class="link"><a href="">Instagram</a></li>
-                <ul>
-                    <li class="sub-social-links"><a href="">Facebook</a></li>
-                    <li class="sub-social-links"><a href="">WhatsApp</a></li>
-                </ul>
-            </ul>
-        </h2>
-    </section>
-
     <main>
-        <!--first section-->
+        <!-- title-information-section -->
         <section>
-            <h2 hidden="">first section</h2>
-            <h2 id="title">Вітаємо у сховищі жаби</h2>
+            <h2 hidden="">title-information-section</h2>
+            <h2 class="title">Вітаємо у сховищі жаби</h2>
 
             <p>Для спілкування жаб'ячою мовою.Тицьни на жабу</p>
             <a href="https://translate.google.com/?hl=ru" target="_blank">
@@ -76,10 +72,10 @@
             </a>
         </section>
 
-        <!--second section-->
+        <!-- about-toad-section -->
         <section>
-            <h2 hidden="">second section</h2>
-            <h2 class="hedder-main">Шось цікаве про жаб</h2>
+            <h2 hidden="">about-toad-section</h2>
+            <h2 class="title">Шось цікаве про жаб</h2>
             <h3 id="aboutToads">Види жаб</h3>
             <ul>
                 <li>Ставкова жаба<br />
@@ -180,9 +176,9 @@
             </ul>
         </section>
 
-        <!--third section-->
+        <!-- interactive-section -->
         <section>
-            <h2 hidden="">third section</h2>
+            <h2 hidden="">interactive-section</h2>
         <input 
             type="text" 
             name="Ім'я жаби" 
@@ -191,32 +187,34 @@
             type="button">Push me</button 
             alt="Тут повинна бути кнопка" 
         />
-        
-        <h2 id="instructionForToads" class="hedder-main">Інструкція до жаби</h2>
-        <ol>
-            <li>Знайти жабу.<br />
-                <a href="css\img\frogForLabel.png"
-                    target="_blank">
-                        Приклад
-                </a>
-            </li>
-            <li>Привітатися.<br />
-                <a href="https://www.youtube.com/watch?v=6m2Cc1_kSw8&ab_channel=%D0%9C%D0%B0%D0%BB%D1%8E%D0%BA%D0%9A%D0%9E%D0%A2%D0%AF"
-                    target="_blank">
-                    Подивитися відео.
-                </a><br />
-                <a type="button" 
-                    href="txtStorage\вітання.txt" 
-                    download="">
-                        Скачати пам'ятку.
-                </a>
-            </li>
-            <li>Відволікти її увагу смаколиком</li>
-            <li>Погладити</li>
-
-        </ol>
+            <!-- instruction-section -->
+            <section>
+                <h2 id="instructionForToads" class="title"">Інструкція до жаби</h2>
+                <ol>
+                    <li>Знайти жабу.<br />
+                        <a href="css\img\frogForLabel.png"
+                            target="_blank">
+                                Приклад
+                        </a>
+                    </li>
+                    <li>Привітатися.<br />
+                        <a href="https://www.youtube.com/watch?v=6m2Cc1_kSw8&ab_channel=%D0%9C%D0%B0%D0%BB%D1%8E%D0%BA%D0%9A%D0%9E%D0%A2%D0%AF"
+                            target="_blank">
+                            Подивитися відео.
+                        </a><br />
+                        <a type="button"
+                            href="txtStorage\вітання.txt"
+                            download="">
+                                Скачати пам'ятку.
+                        </a>
+                    </li>
+                    <li>Відволікти її увагу смаколиком</li>
+                    <li>Погладити</li>
+                </ol>
+            </section>
         </section>
     </main>
+    
     <footer>
         <h2 id="whereTheFindToad">Де знайти жабу?</h2>
             <address>
@@ -231,11 +229,20 @@
             <a href="mailto:jaba@polejaba.com">
                 mailto:jaba@polejaba.com
             </a>
+
+            <!-- social-section -->
             </address>
+            <section>
+        <h2>
+            <ul>
+                <li><a href="">Telegram</a></li>
+                <li><a href="">Discord</a></li>
+                <li><a href="">Instagram</a></li>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">WhatsApp</a></li>
+            </ul>
+        </h2>
+    </section>
     </footer>
 </body>
-<link 
-    href="C:\Users\Vadya\Documents\GitHub\desktop-tutorial\css\style.css" 
-    rel="stylesheet" 
-    type="text/css">
 </html>

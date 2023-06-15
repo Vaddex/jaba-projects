@@ -1,54 +1,54 @@
-h2 {
-    color: green;
+:root {
+    --main-font-color: #212121;
+    --main-bg-color: #fafafa;
+}
+/* common styles */
+
+/* body styles */
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--main-font-color);
+    background-color: var(--main-bg-color);
 }
 
-#title {
-    margin-top: 30px;
+/* links syles */
+.link {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 7px;
 }
 
-.hedder-main {
-    color: brown;
-    border-radius: 10%;
-    background-color: rgba(65, 39, 88, 0.315);
+.link:hover,
+.link:focus {
+    text-decoration: underline;
+}
+/* header styles */
+.title {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 2px 2px 4px lightseagreen;
 }
 
-header {
-    background-color: rgba(114, 194, 10, 0.397);
+.first-logo-part,
+.second-logo-part {
+    color: rgb(168, 145, 111);
+    font-size: 20px;
+    text-decoration: none;
 }
 
-main {
-    background-color: whitesmoke;
+.ul-li-styles {
+    list-style-type: none;
 }
 
-footer {
-    background-color: rgba(114, 194, 10, 0.397);
-}
+/* main styles */
 
-.social-links > li {
-    color: rgb(199, 183, 38);
-}
-
-.social-links .link:hover a {
-    border: 3px solid tomato;
-}
-
-.social-links .link:active a {
-    color: gray;
-}
-
-.social-links .link:hover a
-.social-links .link:focus a {
-    color: green;
-}
-
-.social-links .sub-social-links {
-    color: rgb(199, 183, 38);
-}
-
-.social-links .sub-social-links:hover a {
-    border: 3px solid tomato;
-}
-
-.social-links .sub-social-links:active a {
-    color: gray;    
-}
+/* footer styles */
