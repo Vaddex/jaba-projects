@@ -1,54 +1,81 @@
 :root {
-    --main-font-color: #212121;
-    --main-bg-color: #fafafa;
+  --main-font-color: #212121;
+  --main-bg-color: #fafafa;
+  --headder-bg-color: #099c5744;
 }
 /* common styles */
 
 /* body styles */
 body {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.4;
-    color: var(--main-font-color);
-    background-color: var(--main-bg-color);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--main-font-color);
+  background-color: var(--main-bg-color);
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* links syles */
 .link {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    font-style: italic;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 7px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 7px;
 }
 
-.link:hover,
-.link:focus {
-    text-decoration: underline;
-}
-/* header styles */
+/* headers styles */
 .title {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 25px;
-    font-weight: 700;
-    text-align: center;
-    text-shadow: 2px 2px 4px lightseagreen;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 2px 2px 4px lightseagreen;
 }
 
 .first-logo-part,
 .second-logo-part {
-    color: rgb(168, 145, 111);
-    font-size: 20px;
-    text-decoration: none;
+  color: rgb(168, 145, 111);
+  font-size: 20px;
+  text-decoration: none;
 }
 
-.ul-li-styles {
-    list-style-type: none;
+.nav-hedder {
+  border: 1px dashed #212121;
+  margin-bottom: 20px;
+  padding-top: 0;
+  padding-left: 5px;
+  background-color: var(--headder-bg-color);
+  border-radius: 10px;
 }
 
+.a-in-list-style {
+  list-style-type: none;
+}
 /* main styles */
+.top-picture-toad {
+  border-top: 2px solid rgb(91, 124, 25);
+  border-right: 2px solid rgb(16, 146, 146);
+  border-bottom: 2px solid rgb(33, 19, 165);
+  border-left: 2px solid rgb(121, 12, 121);
+  border-radius: 10px;
+}
+
+.top-picture-toad:hover,
+.top-picture-toad:focus {
+  border-color: cyan;
+}
+
+.top-picture-toad:active {
+  border-color: tomato;
+  border-style: dotted;
+}
 
 /* footer styles */
