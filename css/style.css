@@ -3,9 +3,12 @@
   --main-bg-color: #fafafa;
   --headder-bg-color: #099c5744;
 }
-/* common styles */
 
-/* body styles */
+/* Common stules */
+main {
+  flex-grow: 1;
+}
+
 body {
   font-family: 'Roboto Mono', monospace;
   font-size: 18px;
@@ -16,8 +19,21 @@ body {
   margin: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 a {
   text-decoration: none;
+}
+
+p {
+  display: flexbox;
+}
+
+ul {
+  list-style-type: none;
 }
 
 /* links syles */
@@ -26,7 +42,7 @@ a {
   font-size: 20px;
   font-weight: 600;
   font-style: italic;
-  text-decoration: none;
+
   text-transform: uppercase;
   letter-spacing: 7px;
 }
@@ -38,6 +54,11 @@ a {
   font-weight: 700;
   text-align: center;
   text-shadow: 2px 2px 4px lightseagreen;
+}
+
+.menu-style {
+  display: flex;
+  gap: 30px;
 }
 
 .first-logo-part,
@@ -56,16 +77,55 @@ a {
   border-radius: 10px;
 }
 
-.a-in-list-style {
-  list-style-type: none;
+.headder-fotter-container {
+  max-width: 1336px;
+  margin: 0 auto;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 /* main styles */
+
+.container {
+  max-width: 1280px;
+  padding: 0 15px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-set {
+  flex-shrink: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 10px;
+  margin: 0;
+  flex-basis: 300px;
+}
+
+.card-set-item {
+  width: calc((100% - 10px) / 5);
+  padding-bottom: 0;
+}
+
+.card-set-item-p {
+  display: flex;
+  flex-shrink: 0;
+  max-width: 125px;
+  border: 1px solid green;
+  align-content: center;
+}
+
 .top-picture-toad {
   border-top: 2px solid rgb(91, 124, 25);
   border-right: 2px solid rgb(16, 146, 146);
   border-bottom: 2px solid rgb(33, 19, 165);
   border-left: 2px solid rgb(121, 12, 121);
   border-radius: 10px;
+  padding: 5px 10px;
+
+  overflow: hidden;
 }
 
 .top-picture-toad:hover,
