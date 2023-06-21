@@ -28,10 +28,6 @@ a {
   text-decoration: none;
 }
 
-p {
-  display: flexbox;
-}
-
 ul {
   list-style-type: none;
 }
@@ -100,21 +96,27 @@ ul {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 10px;
-  margin: 0;
-  flex-basis: 300px;
+  margin: 20px 0;
 }
 
 .card-set-item {
   width: calc((100% - 10px) / 5);
   padding-bottom: 0;
+  margin-bottom: 0;
 }
 
-.card-set-item-p {
+.card-set-item-div {
   display: flex;
   flex-shrink: 0;
   max-width: 125px;
   border: 1px solid green;
-  align-content: center;
+}
+
+.card-p {
+  display: flex;
+  margin: 0;
+  padding: 5px 2px;
+  text-align: justify;
 }
 
 .top-picture-toad {
