@@ -1,7 +1,10 @@
 :root {
   --main-font-color: #212121;
-  --main-bg-color: #fafafa;
+  --main-bg-color: #6cd6b2;
   --headder-bg-color: #099c5744;
+  --headder-footer-bg-color: #088300;
+  --title-box-volor: #b1c359ef;
+  --card-item-div-color: #e4f58b;
 }
 
 /* Common stules */
@@ -14,8 +17,6 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.4;
-  color: var(--main-font-color);
-  background-color: var(--main-bg-color);
   margin: 0;
 }
 
@@ -49,7 +50,9 @@ ul {
   font-size: 25px;
   font-weight: 700;
   text-align: center;
-  text-shadow: 2px 2px 4px lightseagreen;
+  border-radius: 10px;
+  background-color: var(--title-box-volor);
+  box-shadow: 7px 7px 10px 2px var(--headder-footer-bg-color);
 }
 
 .menu-style {
@@ -66,7 +69,6 @@ ul {
 
 .nav-hedder {
   border: 1px dashed #212121;
-  margin-bottom: 20px;
   padding-top: 0;
   padding-left: 5px;
   background-color: var(--headder-bg-color);
@@ -79,14 +81,19 @@ ul {
   padding-right: 40px;
   padding-left: 40px;
 }
+
+.headder-bg {
+  background-color: var(--headder-footer-bg-color);
+}
 /* main styles */
 
 .container {
-  max-width: 1280px;
+  max-width: 100%;
   padding: 0 15px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-image: linear-gradient(160deg, #26f9b3b9, #6cd6b346);
 }
 
 .card-set {
@@ -110,6 +117,8 @@ ul {
   flex-shrink: 0;
   max-width: 125px;
   border: 1px solid green;
+  min-height: 61px;
+  background-color: var(--card-item-div-color);
 }
 
 .card-p {
@@ -120,19 +129,17 @@ ul {
 }
 
 .top-picture-toad {
-  border-top: 2px solid rgb(91, 124, 25);
-  border-right: 2px solid rgb(16, 146, 146);
-  border-bottom: 2px solid rgb(33, 19, 165);
-  border-left: 2px solid rgb(121, 12, 121);
   border-radius: 10px;
-  padding: 5px 10px;
-
+  margin-left: 165px;
+  margin-top: 80px;
+  padding: 3px 10px;
   overflow: hidden;
 }
 
 .top-picture-toad:hover,
 .top-picture-toad:focus {
-  border-color: cyan;
+  border: 1px solid;
+  border-color: red;
 }
 
 .top-picture-toad:active {
@@ -140,4 +147,19 @@ ul {
   border-style: dotted;
 }
 
+.hero-section-bg {
+  background-image: url(./img/bg/main-h-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--main-bg-color);
+}
 /* footer styles */
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-bg {
+  background-color: var(--headder-footer-bg-color);
+}
