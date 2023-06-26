@@ -35,16 +35,34 @@ ul {
 
 /* links syles */
 .link {
+  display: flex;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 20px;
   font-weight: 600;
   font-style: italic;
-
+  align-items: center;
   text-transform: uppercase;
   letter-spacing: 7px;
+  padding-right: 20px;
 }
 
 /* headers styles */
+.logo-icom-box {
+  display: block;
+  align-items: center;
+  margin: 0;
+  padding: 10px 40px 10px 0;
+}
+
+.logo-icon {
+  fill: none;
+}
+
+.logo-icon:hover,
+.logo-icon:focus {
+  fill: #e4f58b;
+}
+
 .title {
   font-family: 'Roboto Mono', monospace;
   font-size: 25px;
@@ -76,10 +94,12 @@ ul {
 }
 
 .headder-fotter-container {
+  display: flex;
   max-width: 1336px;
   margin: 0 auto;
   padding-right: 40px;
   padding-left: 40px;
+  justify-content: space-around;
 }
 
 .headder-bg {
