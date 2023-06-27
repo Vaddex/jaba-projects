@@ -137,6 +137,7 @@ ul {
   flex-shrink: 0;
   max-width: 125px;
   border: 1px solid green;
+
   min-height: 61px;
   background-color: var(--card-item-div-color);
 }
@@ -149,17 +150,17 @@ ul {
 }
 
 .top-picture-toad {
-  border-radius: 10px;
-  margin-left: 165px;
-  margin-top: 80px;
-  padding: 3px 10px;
-  overflow: hidden;
+  position: relative;
+  top: 50px;
+  left: 160px;
 }
 
 .top-picture-toad:hover,
 .top-picture-toad:focus {
-  border: 1px solid;
-  border-color: red;
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+  transition-delay: 0;
+  transform: rotate(180deg);
 }
 
 .top-picture-toad:active {
