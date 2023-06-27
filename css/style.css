@@ -55,15 +55,20 @@ ul {
 }
 
 .logo-icon {
-  fill: none;
+  fill: var(--main-font-color);
 }
 
 .logo-icon:hover,
 .logo-icon:focus {
-  fill: #e4f58b;
+  background-color: #e4f58b;
+  border: 10px solid #e4f58b;
+  border-radius: 10px;
 }
 
 .title {
+  position: sticky;
+  top: 75px;
+  z-index: 1;
   font-family: 'Roboto Mono', monospace;
   font-size: 25px;
   font-weight: 700;
@@ -103,6 +108,9 @@ ul {
 }
 
 .headder-bg {
+  position: sticky;
+  top: 0;
+  z-index: 999;
   background-color: var(--headder-footer-bg-color);
 }
 /* main styles */
