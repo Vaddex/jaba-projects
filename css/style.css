@@ -47,22 +47,13 @@ ul {
 }
 
 /* headers styles */
-.logo-icom-box {
-  display: block;
-  align-items: center;
+.amimated-logo {
+  display: flex;
   margin: 0;
-  padding: 10px 40px 10px 0;
-}
-
-.logo-icon {
-  fill: var(--main-font-color);
-}
-
-.logo-icon:hover,
-.logo-icon:focus {
-  background-color: #e4f58b;
-  border: 10px solid #e4f58b;
-  border-radius: 10px;
+  padding: 0 20px 5px 0;
+  position: absolute;
+  left: 3px;
+  bottom: 5px;
 }
 
 .title {
@@ -78,11 +69,6 @@ ul {
   box-shadow: 7px 7px 10px 2px var(--headder-footer-bg-color);
 }
 
-.menu-style {
-  display: flex;
-  gap: 30px;
-}
-
 .first-logo-part,
 .second-logo-part {
   color: rgb(168, 145, 111);
@@ -90,12 +76,18 @@ ul {
   text-decoration: none;
 }
 
-.nav-hedder {
-  border: 1px dashed #212121;
-  padding-top: 0;
-  padding-left: 5px;
+.nav-hedder-container {
+  display: flex;
+  padding: 5px 30px;
+  border: 1px solid #212121;
   background-color: var(--headder-bg-color);
   border-radius: 10px;
+  gap: 50px;
+  margin-left: 500px;
+}
+
+.nav-hedder-box {
+  display: flex;
 }
 
 .headder-fotter-container {
