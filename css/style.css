@@ -104,7 +104,29 @@ ul {
   top: 0;
   z-index: 999;
   background-color: var(--headder-footer-bg-color);
+  animation-name: headerAnimation;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
+
+.headder-bg:hover,
+.headder-bg:focus {
+  animation-play-state: paused;
+}
+
+@keyframes headerAnimation {
+  0% {
+    background-color: teal;
+  }
+  50% {
+    background-color: violet;
+  }
+  100% {
+    background-color: teal;
+  }
+}
+
 /* main styles */
 
 .container {
@@ -153,19 +175,14 @@ ul {
   position: relative;
   top: 50px;
   left: 160px;
+  transition-duration: 3000ms;
+  transition-timing-function: ease-out;
 }
 
 .top-picture-toad:hover,
 .top-picture-toad:focus {
-  transition-duration: 500ms;
-  transition-timing-function: linear;
-  transition-delay: 0;
-  transform: rotate(180deg);
-}
-
-.top-picture-toad:active {
-  border-color: tomato;
-  border-style: dotted;
+  transition-delay: 200ms;
+  transform: rotate(3000deg);
 }
 
 .hero-section-bg {
