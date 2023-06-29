@@ -57,8 +57,7 @@ ul {
 }
 
 .title {
-  position: sticky;
-  top: 75px;
+  margin: 15px 0;
   z-index: 1;
   font-family: 'Roboto Mono', monospace;
   font-size: 25px;
@@ -173,7 +172,7 @@ ul {
 
 .top-picture-toad {
   position: relative;
-  top: 50px;
+  top: 180px;
   left: 160px;
   transition-duration: 3000ms;
   transition-timing-function: ease-out;
@@ -185,13 +184,29 @@ ul {
   transform: rotate(3000deg);
 }
 
+.hero-second-toad {
+  display: flex;
+  position: relative;
+  top: 390px;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+
+.hero-second-toad:hover,
+.hero-second-toad:focus {
+  transform: translateY(-120px);
+}
+
 .hero-section-bg {
   background-image: url(./img/bg/main-h-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: var(--main-bg-color);
+  border-radius: 20px;
+  overflow: hidden;
 }
+
 /* footer styles */
 .footer-container {
   display: flex;
