@@ -143,14 +143,24 @@ ul {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 10px;
+  gap: 20px 20px;
   margin: 20px 0;
 }
 
 .card-set-item {
-  width: calc((100% - 10px) / 5);
+  width: calc((100% - 10px) / 6);
   padding-bottom: 0;
   margin-bottom: 0;
+  transition: transform 250ms ease-in-out;
+}
+
+.card-set-item:hover,
+.card-set-item:focus {
+  transform: scale(1.1);
+}
+
+.card-toad-img-style {
+  border-radius: 20px 20px 0 0;
 }
 
 .card-set-item-div {
@@ -161,6 +171,7 @@ ul {
 
   min-height: 61px;
   background-color: var(--card-item-div-color);
+  border-radius: 0 0 20px 20px;
 }
 
 .card-p {
@@ -168,6 +179,7 @@ ul {
   margin: 0;
   padding: 5px 2px;
   text-align: justify;
+  text-align: start;
 }
 
 .top-picture-toad {
@@ -195,6 +207,32 @@ ul {
 .hero-second-toad:hover,
 .hero-second-toad:focus {
   transform: translateY(-120px);
+}
+
+.hero-third-toad {
+  display: ;
+  position: relative;
+  left: 720px;
+  top: 7px;
+  animation-name: thirdHeroToad;
+  animation-timing-function: ease-in-out;
+}
+
+.hero-third-toad:hover,
+.hero-third-toad:focus {
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes thirdHeroToad {
+  0% {
+    transform: rotate(-45deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
 }
 
 .hero-section-bg {
