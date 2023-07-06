@@ -6,12 +6,10 @@
   --title-box-volor: #b1c359ef;
   --card-item-div-color: #e4f58b;
 }
-
 /* Common stules */
 main {
   flex-grow: 1;
 }
-
 body {
   font-family: 'Roboto Mono', monospace;
   font-size: 18px;
@@ -19,20 +17,19 @@ body {
   line-height: 1.4;
   margin: 0;
 }
-
 img {
   display: block;
   max-width: 100%;
 }
-
 a {
   text-decoration: none;
 }
-
 ul {
   list-style-type: none;
 }
-
+input {
+  font-family: inherit;
+}
 /* links syles */
 .link {
   display: flex;
@@ -45,7 +42,6 @@ ul {
   letter-spacing: 7px;
   padding-right: 20px;
 }
-
 /* headers styles */
 .amimated-logo {
   display: flex;
@@ -55,7 +51,6 @@ ul {
   left: 3px;
   bottom: 5px;
 }
-
 .title {
   margin: 15px 0;
   z-index: 1;
@@ -67,14 +62,12 @@ ul {
   background-color: var(--title-box-volor);
   box-shadow: 7px 7px 10px 2px var(--headder-footer-bg-color);
 }
-
 .first-logo-part,
 .second-logo-part {
   color: rgb(168, 145, 111);
   font-size: 20px;
   text-decoration: none;
 }
-
 .nav-hedder-container {
   display: flex;
   padding: 5px 30px;
@@ -84,11 +77,9 @@ ul {
   gap: 50px;
   margin-left: 500px;
 }
-
 .nav-hedder-box {
   display: flex;
 }
-
 .headder-fotter-container {
   display: flex;
   max-width: 1336px;
@@ -97,7 +88,6 @@ ul {
   padding-left: 40px;
   justify-content: space-around;
 }
-
 .headder-bg {
   position: sticky;
   top: 0;
@@ -108,12 +98,10 @@ ul {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-
 .headder-bg:hover,
 .headder-bg:focus {
   animation-play-state: paused;
 }
-
 @keyframes headerAnimation {
   0% {
     background-color: teal;
@@ -125,9 +113,7 @@ ul {
     background-color: teal;
   }
 }
-
-/* main styles */
-
+/* main section */
 .container {
   max-width: 100%;
   padding: 0 15px;
@@ -135,8 +121,8 @@ ul {
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(160deg, #26f9b3b9, #6cd6b346);
+  position: relative;
 }
-
 .card-set {
   flex-shrink: 0;
   height: 100%;
@@ -146,23 +132,19 @@ ul {
   gap: 20px 20px;
   margin: 20px 0;
 }
-
 .card-set-item {
   width: calc((100% - 10px) / 6);
   padding-bottom: 0;
   margin-bottom: 0;
   transition: transform 250ms ease-in-out;
 }
-
 .card-set-item:hover,
 .card-set-item:focus {
   transform: scale(1.1);
 }
-
 .card-toad-img-style {
   border-radius: 20px 20px 0 0;
 }
-
 .card-set-item-div {
   display: flex;
   flex-shrink: 0;
@@ -173,7 +155,6 @@ ul {
   background-color: var(--card-item-div-color);
   border-radius: 0 0 20px 20px;
 }
-
 .card-p {
   display: flex;
   margin: 0;
@@ -181,50 +162,43 @@ ul {
   text-align: justify;
   text-align: start;
 }
-
 .top-picture-toad {
-  position: relative;
+  position: absolute;
   top: 180px;
   left: 160px;
   transition-duration: 3000ms;
   transition-timing-function: ease-out;
 }
-
 .top-picture-toad:hover,
 .top-picture-toad:focus {
   transition-delay: 200ms;
   transform: rotate(3000deg);
 }
-
 .hero-second-toad {
   display: flex;
-  position: relative;
-  top: 390px;
+  position: absolute;
+  top: 565px;
   transition-duration: 1s;
   transition-timing-function: linear;
 }
-
 .hero-second-toad:hover,
 .hero-second-toad:focus {
   transform: translateY(-120px);
 }
-
 .hero-third-toad {
-  display: ;
-  position: relative;
+  display: flex;
+  position: absolute;
   left: 720px;
-  top: 7px;
+  top: 380px;
   animation-name: thirdHeroToad;
   animation-timing-function: ease-in-out;
 }
-
 .hero-third-toad:hover,
 .hero-third-toad:focus {
   animation-duration: 500ms;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-
 @keyframes thirdHeroToad {
   0% {
     transform: rotate(-45deg);
@@ -234,7 +208,6 @@ ul {
     transform: rotate(45deg);
   }
 }
-
 .hero-section-bg {
   background-image: url(./img/bg/main-h-bg.jpg);
   background-repeat: no-repeat;
@@ -244,13 +217,11 @@ ul {
   border-radius: 20px;
   overflow: hidden;
 }
-
 /* footer styles */
 .footer-container {
   display: flex;
   gap: 20px;
 }
-
 .footer-bg {
   background-color: var(--headder-footer-bg-color);
 }
