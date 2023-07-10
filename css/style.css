@@ -217,6 +217,52 @@ input {
   border-radius: 20px;
   overflow: hidden;
 }
+.interactive-box {
+  border: 2px solid #3aa480;
+  background-color: #3aa480;
+  border-radius: 25px;
+  margin-top: 3%;
+}
+.jeb-text-input {
+  width: 400px;
+  border-radius: 10px;
+}
+.jeb-text-input:hover,
+.jeb-text-input:focus {
+  background-color: #e4f58b;
+}
+.jeb-select-st {
+  width: 150px;
+  border-radius: 10px;
+}
+.jeb-select-st:hover,
+.jeb-select-st:focus {
+  background-color: #e4f58b;
+}
+.jeb-form-st {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 20px;
+  gap: 10px;
+}
+.jeb-text-row {
+  margin: 0 auto;
+  padding: 1% 0;
+}
+.check-row {
+  padding-left: 3%;
+}
+.jeb-form-btn {
+  width: 300px;
+  height: 50px;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+.jeb-form-btn:hover,
+.jeb-form-btn:focus {
+  background-color: #e4f58b;
+}
+
 /* footer styles */
 .footer-container {
   display: flex;

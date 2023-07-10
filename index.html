@@ -216,11 +216,30 @@
         <!-- interactive-section -->
         <section>
             <h2 hidden="">interactive-section</h2>
-        <div>
+        <div class="interactive-box">
             <form name="Jeba_form" class="jeb-form-st" autocomplete="off">
-                <label>
+                <label class="jeb-text-row">
                     А яка твоя улюблена жаба?
-                    <input class="" type="text" placeholder="Яка ваша улюблена жаба?">
+                    <input class="jeb-text-input" type="text" placeholder="Яка ваша улюблена жаба?">
+                    <select name="jeb-selection" class="jeb-select-st" id="">
+                        <option value="xs">Extra Small</option>
+                        <option value="s">Small</option>
+                        <option value="m">Medium</option>
+                        <option value="l">Medium</option>
+                        <option value="xl">Extra Large</option>
+                    </select>
+                </label>
+                <label class="check-row">
+                    <input type="checkbox" name="" id="">
+                    Я надаю згоду на обробку персональних данних
+                </label>
+                <label class="check-row">
+                    <input type="checkbox" name="" id="">
+                    Присягаюся дотримуватись всіх заповідей великої жаби
+                </label>
+                <label class="check-row">
+                    <input type="checkbox" name="" id="">
+                    Відправляти мені актуальну інформацію щодо поповнення жаб'ячої бази данних на мій Телеграм
                 </label>
                 <button type="reset" class="jeb-form-btn">Тиць</button>
             </form>
@@ -259,7 +278,7 @@
                 <address>
                 Планета: Земля (можливо десь ще є, ми не перевіряли).<br />
                 Континент: Маже всі (окрім Антарктиди, там для них занадто ПОВІЛЬНО).<br />
-                Місце проживання: Будь яка не солоне водоймище, земля, пісок.<br />
+                Місце проживання: Будь яке не солоне водоймище, земля, пісок.<br />
                 Номер телефону: Так вона тобі і сказала. Можеш спробувати цей:
                 <a href="tel:+13371337">
                     tel:+13371337
