@@ -75,7 +75,6 @@
 // console.log(greeting);
 
 // or
-
 // const greeting = `Welcome ${userName}, your personal ID is ${userId}!`
 // console.log(greeting);
 
@@ -221,7 +220,6 @@
 // console.log(type); //adult
 
 // or
-
 // const age = 26;
 // const type = age >= 26 ? 'adult' : 'child';
 // console.log(type); // adult
@@ -237,7 +235,6 @@
 // console.log(biggerNumber); // 10
 
 // or
-
 // const num1 = 5;
 // const num2 = 10;
 // const biggerNumber = num1 > num2 ? num1 : num2;
@@ -331,3 +328,190 @@
 //     }
 //     console.log('Непарне і: ', i);
 // }
+
+// ! Масиви
+// ? Перевизначення
+// const clients = ['mango', 'kiwi', 'orange', 'agent 47'];
+// clients[2] = 'lemon';
+// console.log(clients); // [ 'mango', 'kiwi', 'lemon', 'agent 47' ];
+
+// ? Довжина масиву
+// const clients = ['mango', 'kiwi', 'orange', 'agent 47'];
+// console.log(clients.length);     // 4
+
+// ? Індекс останнього елемента
+// const clients = ['mango', 'kiwi', 'orange', 'agent 47'];
+// const clientsLastElement = clients.length - 1;
+// console.log(clientsLastElement);    // 3
+// console.log(clients[clientsLastElement]);   //agent 47
+
+// ? Ітерація по масиву
+// const clients = ['mango', 'kiwi', 'orange', 'agent 47'];
+// for (let i = 0; i < clients.length; i += 1) {
+//     console.log(clients[i]);
+// }
+
+// ? Цикл for...of
+// const clients = ['Biba', 'Boba', '2', 'Ultramessershmith', 'Allallbama'];
+// for (const client of clients) {
+//     console.log(client);
+// }
+
+// ? Оператори break і continue
+// const clients = ['Biba', 'Boba', '2', 'Ultramessershmith', 'Allallbama'];
+// const clientNameToFind = 'Boba';
+// let message;
+// for (const clint of clients) {
+//     if (clint === clientNameToFind) {
+//         message = 'That person is exist';
+//         break;
+//     } else {
+//         message = `That person doesn't exist`;
+//     }
+// }
+// console.log(message);   // That person is exist
+
+// const someNumbers = [1, 2, 5, 43, 3, 53, 653, 22, 86, 92];
+// const threshold = 24;
+// for (let i = 0; i < someNumbers.length; i += 1) {
+//     if (someNumbers[i] < threshold) {
+//         continue
+//     }
+//     console.log(`Number bigger than ${threshold}: ${someNumbers[i]}`);
+// }
+
+// ? Присвоєння за посиланням і за значенням
+// let a = 5;
+// let b = a;
+// Присвоєння за значенням, в пам'яті буде створена ще одна комірка, в яку буде скопійоване значення 5
+// console.log(a); // 5
+// console.log(b); // 5
+// a = 10;
+// console.log(a); // 10
+// console.log(b); // 5
+// Значення b не змінилося, оскільки це окрема копія
+
+// const a = ['Mango'];
+// const b = a;
+// console.log(a); // [ 'Mango' ]
+// console.log(b); // [ 'Mango' ]
+// Оскільки a - це масив, в b записується посилання на вже існуючий
+// масив в пам'яті. Тепер a і b вказують на той самий масив.
+
+// Змінимо масив, додавши ще один елемент, використовуючи вказівник з a
+// a.push('Kiwi');
+// console.log(a); // [ 'Mango', 'Kiwi' ]
+// console.log(b); // [ 'Mango', 'Kiwi' ]
+
+// or
+// b.push('Pineaple');
+// console.log(a); // [ 'Mango', 'Kiwi', 'Pineaple' ]
+// console.log(b); // [ 'Mango', 'Kiwi', 'Pineaple' ]
+
+// ! Методи масиву
+// ? Методи split() і join()
+// * join(delimiter)
+// const user = 'Mango';
+// console.log(user.split('')); // [ 'M', 'a', 'n', 'g', 'o' ]
+// const phrase = '9/11 was staged by the US government';
+// console.log(phrase.split(' ')); // [ '9/11', 'was', 'staged', 'by', 'the', 'US', 'government' ]
+
+// const user = [ 'M', 'a', 'n', 'g', 'o' ];
+// console.log(user.join('')); // 'Mango'
+// console.log(user.join(' ')); // 'M a n g o'
+// console.log(user.join('-')); // 'M-a-n-g-o'
+
+// ? Метод indexOf()
+// const clients = ['mango', 'kiwi', 'orange', 'agent 47'];
+// console.log(clients.indexOf('mango')); // 0
+// console.log(clients.indexOf('orange')); // 2
+// console.log(clients.indexOf('ma')); // -1
+
+// ? Метод includes()
+// const clients = ['mango', 'kiwi', 'orange', 'agent 47'];
+// console.log(clients.includes('kiwi')); // true
+// console.log(clients.includes('lemon')); // false
+
+// const redFruits = ['apple', 'raspberry', 'cranberry', 'strawberry', 'chery', 'red ribes', 'merry', 'rose hip', 'rowanberry', 'pomegranate', 'watermelon'];
+// const fruit = 'rowanberry';
+// const hasFruit = redFruits.includes(fruit);
+// if (hasFruit) {
+//     console.log(`${fruit} is a red fruit`); // rowanberry is a red fruit
+// } else {
+//     console.log(`Are you stupid? It's not a red fruit`);
+// }
+
+// ? Методи push() і pop()
+// const nubers = [];
+// nubers.push(null);
+// nubers.push(235);
+// nubers.push('simple');
+// nubers.push(NaN);
+// nubers.push(5229);
+// console.log(nubers); // [ null, 235, 'simple', NaN, 5229 ]
+
+// const anotherNumbers = [21, 22, 523, 1];
+// anotherNumbers.pop();
+// console.log(anotherNumbers); // [ 21, 22, 523 ]
+// const sus = [];
+// console.log(sus.pop()); // undefined
+ 
+// or
+// console.log(anotherNumbers.pop()); // [ 21, 22, 523 ] 523 <= повертає те що вирізали
+
+// ? Метод slice()
+//* slice(begin, end)
+// const random = [null, 235, 'simple', NaN, 5229];
+// console.log(random.slice(1, 3)); // [ 235, 'simple' ]
+// console.log(random.slice()); // [ null, 235, 'simple', NaN, 5229 ]
+// console.log(random.slice(2)); // [ 'simple', NaN, 5229 ]
+// console.log(random.slice(-2)); // [ NaN, 5229 ]
+
+// ? Метод splice()
+// * Видалення  splice(position, num)
+// const scores = [1, 2, 3, 4, 5];
+// const deletedScores = scores.splice(0, 3);
+// console.log(scores); // [ 4, 5 ]
+// console.log(deletedScores); // [ 1, 2, 3 ]
+
+// * Додавання splice(position, 0, new_element_1, new_element_2, ...)
+// const colors = ['red', 'green', 'purple'];
+// colors.splice(2, 0, 'yellow', 'orange')
+// console.log(colors); // [ 'red', 'green', 'yellow', 'orange', 'purple' ]
+
+// * Заміна splice(position, num, new_element_1, new_element_2, ...)
+// const colors = ['red', 'green', 'purple'];
+// colors.splice(2, 1, 'pink', 'brown');
+// console.log(colors); // [ 'red', 'green', 'pink', 'brown' ]
+
+// ? Метод concat()
+// const oldClients = ['mango', 'kiwi', 'orange', 'agent 47'];
+// const newClients = ['raspberry', 'rowanberry', 'red ribe', 'pomegrenade', 'benjamin ladan'];
+// const allClientsTogether = oldClients.concat(newClients);
+// console.log(allClientsTogether); 
+//[
+//   'mango',
+//   'kiwi',
+//   'orange',
+//   'agent 47',
+//   'raspberry',
+//   'rowanberry',
+//   'red ribe',
+//   'pomegrenade',
+//   'benjamin ladan'
+// ]
+
+// or
+// const allClientsTogether = newClients.concat(oldClients);
+// console.log(allClientsTogether);
+// [
+//   'raspberry',
+//   'rowanberry',
+//   'red ribe',
+//   'pomegrenade',
+//   'benjamin ladan',
+//   'mango',
+//   'kiwi',
+//   'orange',
+//   'agent 47'
+// ]
