@@ -488,7 +488,7 @@
 // const oldClients = ['mango', 'kiwi', 'orange', 'agent 47'];
 // const newClients = ['raspberry', 'rowanberry', 'red ribe', 'pomegrenade', 'benjamin ladan'];
 // const allClientsTogether = oldClients.concat(newClients);
-// console.log(allClientsTogether); 
+// console.log(allClientsTogether);
 //[
 //   'mango',
 //   'kiwi',
@@ -515,3 +515,61 @@
 //   'orange',
 //   'agent 47'
 // ]
+
+// ! Функції
+// ? Оголошення функції
+// function multiply() {
+// Тіло функції
+//   console.log("Це лог на момент виклику функції multiply");
+// }
+// 2. Виклики функції multiply
+// multiply(); // 'Це лог на момент виклику функції multiply'
+// multiply(); // 'Це лог на момент виклику функції multiply'
+// multiply(); // 'Це лог на момент виклику функції multiply'
+
+// ? Параметри та аргументи
+// function multiply(x, y, z) { // параметри
+//     console.log(`Результат множення дорівнює ${x * y * z}`);
+// }
+// аргументи
+// multiply(2, 3, 5); // Результат множення дорівнює 30
+// multiply(4, 8, 12); // Результат множення дорівнює 384
+// multiply(17, 6, 25); // Результат множення дорівнює 2550
+
+// ? Повернення значення
+// function multiply(x, y, z) {
+    // console.log("Код до return виконується звичайним чином");
+    // return x * y * z;
+    // console.log("Цей лог ніколи не виконається, він стоїть після return");
+// }
+// Результат роботи функції можна зберегти у змінну
+// let result = multiply(2, 3, 5);
+// console.log(result); // 30
+// result = multiply(4, 8, 12);
+// console.log(result); // 384
+// result = multiply(17, 6, 25);
+// console.log(result); // 2550
+
+// ? Порядок виконання коду
+// function multiply(x, y, z) {
+//   console.log(`Результат множення дорівнює ${x * y * z}`);
+// }
+// console.log("Лог до виклику функції multiply");
+// multiply(2, 3, 5); // Результат множення дорівнює 30
+// console.log("Лог після виклику функції multiply");
+
+// Послідовність логів в консолі
+// "Лог до виклику функції multiply"
+// "Результат множення дорівнює 30"
+// "Лог після виклику функції multiply"
+
+// ? Параметри за замовчуванням
+function count(countFrom = 0, countTo = 10, step = 1) {
+    console.log(`countFrom = ${countFrom}, countTo = ${countTo}, step = ${step}`);
+    for (let i = 0; i <= countTo; i += step) {
+console.log(i);
+    }
+}
+count(1, 5);
+count(2);
+count();
