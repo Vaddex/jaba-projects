@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 // !Завжди використовуй суворий режим.
 
 // const consoleLoginInput = confirm('Будьте обережні, велика жаба стежить за тобою!');
@@ -156,7 +156,7 @@
 // console.log(!true); // false
 // console.log(!false); // true
 // console.log(!3); // .!3 -> !true -> false
-// console.log(!"Frog"); // .!Frog -> !true -> false
+// console.log(!'Frog'); // .!Frog -> !true -> false
 // const isOline = true;
 // console.log(isOline); // true
 // const isNotOnline = !isOline;
@@ -520,7 +520,7 @@
 // ? Оголошення функції
 // function multiply() {
 // Тіло функції
-//   console.log("Це лог на момент виклику функції multiply");
+//   console.log('Це лог на момент виклику функції multiply');
 // }
 // 2. Виклики функції multiply
 // multiply(); // 'Це лог на момент виклику функції multiply'
@@ -538,9 +538,9 @@
 
 // ? Повернення значення
 // function multiply(x, y, z) {
-    // console.log("Код до return виконується звичайним чином");
+    // console.log('Код до return виконується звичайним чином');
     // return x * y * z;
-    // console.log("Цей лог ніколи не виконається, він стоїть після return");
+    // console.log('Цей лог ніколи не виконається, він стоїть після return');
 // }
 // Результат роботи функції можна зберегти у змінну
 // let result = multiply(2, 3, 5);
@@ -554,22 +554,159 @@
 // function multiply(x, y, z) {
 //   console.log(`Результат множення дорівнює ${x * y * z}`);
 // }
-// console.log("Лог до виклику функції multiply");
+// console.log('Лог до виклику функції multiply');
 // multiply(2, 3, 5); // Результат множення дорівнює 30
-// console.log("Лог після виклику функції multiply");
+// console.log('Лог після виклику функції multiply');
 
 // Послідовність логів в консолі
-// "Лог до виклику функції multiply"
-// "Результат множення дорівнює 30"
-// "Лог після виклику функції multiply"
+// 'Лог до виклику функції multiply'
+// 'Результат множення дорівнює 30'
+// 'Лог після виклику функції multiply'
 
 // ? Параметри за замовчуванням
-function count(countFrom = 0, countTo = 10, step = 1) {
-    console.log(`countFrom = ${countFrom}, countTo = ${countTo}, step = ${step}`);
-    for (let i = 0; i <= countTo; i += step) {
-console.log(i);
-    }
-}
-count(1, 5);
-count(2);
-count();
+// function count(countFrom = 0, countTo = 10, step = 1) {
+//     console.log(`countFrom = ${countFrom}, countTo = ${countTo}, step = ${step}`);
+//     for (let i = 0; i <= countTo; i += step) {
+// console.log(i);
+//     }
+// }
+// count(1, 5);
+// count(2);
+// count();
+
+// ? Псевдомасив arguments
+// function multiply() {
+//     let total = 1;
+//     for (const argument of arguments) {
+//         total *= argument;
+//     }
+//     return total;
+// }
+// console.log(multiply(1, 2, 3,)); // 6
+// console.log(multiply(1, 2, 3, 4)); // 24
+// console.log(multiply(1, 2, 3, 4, 5)); // 120
+
+// * Перетворення псевдомасиву
+// function fn() {
+// Змінна args буде містити повноцінний масив
+//     const args = Array.from(arguments);
+// }
+// function fn(...args) {
+// Змінна args буде містити повноцінний масив
+// }
+
+// ? Патерн «Раннє повернення»
+// function withdraw(amount, balance) {
+//     if (amount === 0) {
+//         console.log('Для проведення операції введіть суму більшу за нуль');
+//     } else if (amount > balance) {
+//         console.log('Недостатньо коштів на рахунку');
+//     } else {
+//         console.log('Операція зняття коштів проведена успішно');
+//     }
+// }
+// withdraw(0, 300); // Для проведення операції введіть суму більшу за нуль
+// withdraw(500, 300); // Недостатньо коштів на рахунку
+// withdraw(100, 300); // Операція зняття коштів проведена успішно
+
+// function withdraw(amount, balance) {
+    // Якщо умова виконується, викликається console.log
+    // і вихід із функції. Код після тіла if не виконається.
+    // if (amount === 0) {
+    //     console.log('Для проведення операції введіть суму більшу за нуль');
+    //     return;
+    // }
+    // Якщо умова першого if не виконалась, його тіло пропускається
+    // та інтерпретатор доходе до другого if.
+    // Якщо умова виконується, викликається console.log і вихід із функції.
+    // Код, що знаходиться після тіла if, не виконається.
+    // if (amount > balance) {
+    //     console.log('Недостатньо коштів на рахунку');
+    //     return;
+    // }
+    // Якщо жоден із попередніх if не виконався,
+    // інтерпретатор доходить до цього коду і виконує його.
+    // console.log('Операція зняття коштів проведена');
+// }
+// withdraw(0, 300); // Для проведення операції введіть суму більшу за нуль
+// withdraw(500, 300); // Недостатньо коштів на рахунку
+// withdraw(100, 300); // Операція зняття коштів проведена
+
+// ? Функціональний вираз
+// * Оголошення функції (function declaration)
+// function multiply(x, y, z) {
+//     console.log(`Результат множення дорівнює ${x * y * z}`);
+// }
+
+// * Функціональний вираз (function expression)
+// const multiply = function(x, y, z) {
+//     console.log(`Результат множення дорівнює ${x * y * z}`);
+// }
+
+// ! Область видимості
+// ? Глобальна область видимості
+// const globalValue = 10;
+// console.log(globalValue); // 10
+
+// function foo() {
+//     console.log(globalValue); // 10
+// }
+
+// for (let i = 0; i < 5; i += 1) {
+//     console.log(globalValue); // 10
+//     if (i === 2) {
+//         console.log(globalValue); // 10
+//     }
+// }
+
+// ? Блокова область видимості
+// function foo() {
+//     const a = 20;
+//     console.log(a); // 20
+
+//     for (let i = o; i < 5; i += 1) {
+//         console.log(a); // 20
+//     }
+//     if (i === 2) {
+//         console.log(a); // 20
+//     }
+// }
+// ❌ Помилка! Змінна a - недоступна у глобальній області видимості
+// console.log(a);
+
+// for (let i = 0; i < 5; i += 1) {
+// ❌ Помилка! Змінна a - недоступна в цій області видимості
+//     console.log(a);
+// }
+
+// or
+// for (let i = 0; i < 5; i += 1) {
+//     const a = 20;
+//     console.log(a); // 20
+//     if (i === 2) {
+//         const b = 30;
+//         console.log(a); // 20
+//         console.log(b); //30
+//     }
+//     if (i === 3) {
+//         console.log(a); // 20
+        // ❌ Помилка! Змінна b - недоступна в цій області видимості
+//         console.log(b);
+//     }
+// }
+
+// ! Стек викликів
+// function fnA() {
+//     console.log('Лог всередині функції fnA до виклику fnB');
+//     fnB();
+//     console.log('Лог всередині функції fnA після виклику fnB');
+// }
+// function fnB() {
+//     console.log('Лог всередині функції fnB');
+// }
+
+// console.log('Лог до виклику fnA');
+// fnA();
+// console.log('Лог після виклику fnA');
+
+// ? Стек
