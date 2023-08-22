@@ -710,3 +710,73 @@
 // console.log('Лог після виклику fnA');
 
 // ? Стек
+// * Стек - структура даних, яка працює за принципом LIFO (Last-In-First-Out), тобто останнім прийшов - першим пішов. Останнє, що додається у стек, буде видалено з нього першим, - тому можна додати або видалити елементи тільки з верхівки стека.
+// function bar() {
+//     console.log('bar');
+// }
+
+// function baz() {
+//     console.log('baz');
+// }
+
+// function foo() {
+//     console.log('foo');
+//     bar();
+//     baz();
+// }
+// foo();
+
+// foo
+// bar
+// baz
+
+
+// function getExtremeElements(array) {
+//     const arraylength = array.length - 1;
+//     const lastElements = array[arraylength];
+//   let filetredarr = [array[0], lastElements];
+//   return filetredarr;
+// }
+
+// getExtremeElements([1, 2, 3, 4, 5])
+// getExtremeElements(['Earth', 'Mars', 'Venus'])
+// getExtremeElements(['apple', 'peach', 'pear', 'banana'])
+
+// function slugify(title) {
+//   let toArr = title.t
+//   let format = title.join('-');
+//   let addingsymb = format.toLowerCase()
+
+// return addingsymb;
+// }
+// slugify("Arrays for begginers");
+// slugify("Arrays for begginers");
+// slugify("Ten secrets of JavaScript");
+// slugify("How to become a JUNIOR developer in TWO WEEKS");
+
+// function makeArray(firstArray, secondArray, maxLength) {
+//   const newArray = firstArray.concat(secondArray);
+//   return newArray.slice(0, maxLength);
+// }
+// makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3);
+// makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4);
+// makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3);
+// makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2);
+// makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4);
+// makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0);
+
+// function calculateTotal(number) {
+//   let sum = 0;
+// for (let i = 1; i <= number; i += 1) {
+// sum += i;
+//   }
+//   console.log(sum);
+//   return sum;
+// }
+// calculateTotal(1);
+// calculateTotal(3);
+// calculateTotal(7);
+// calculateTotal(18);
+// calculateTotal(24);
+
+
