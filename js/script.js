@@ -737,7 +737,6 @@
 //   let filetredarr = [array[0], lastElements];
 //   return filetredarr;
 // }
-
 // getExtremeElements([1, 2, 3, 4, 5])
 // getExtremeElements(['Earth', 'Mars', 'Venus'])
 // getExtremeElements(['apple', 'peach', 'pear', 'banana'])
@@ -746,7 +745,6 @@
 //   let toArr = title.t
 //   let format = title.join('-');
 //   let addingsymb = format.toLowerCase()
-
 // return addingsymb;
 // }
 // slugify("Arrays for begginers");
@@ -779,4 +777,54 @@
 // calculateTotal(18);
 // calculateTotal(24);
 
+// function calculateTotalPrice(order) {
+//   let total = 0;
+// for (let i = 0; i < order.length; i += 1) {
+//   total += order[i];
+// }
+//   return total;
+// }
+// calculateTotalPrice([12, 85, 37, 4]);
+// calculateTotalPrice([164, 48, 291]);
+// calculateTotalPrice([412, 371, 94, 63, 176]);
 
+// function findLongestWord(string) {
+//     let stringUnion = string.split(' ');
+//     let lengthWord = stringUnion[0];
+//     for (let i = 1; i < stringUnion.length; i += 1) {
+//         if (stringUnion[i].length > lengthWord.length) {
+//             lengthWord = stringUnion[i];
+//         }
+//     }
+//     console.log(lengthWord);
+//     return lengthWord
+// }
+// findLongestWord("The quick brown fox jumped over the lazy dog");
+// findLongestWord("Google do a roll");
+// findLongestWord("May the force be with you");
+
+// function createArrayOfNumbers(min, max) {
+//     const numbers = [];
+//     for (let i = min; i <= max; i += 1)
+//         numbers.push(i);
+//     console.log(numbers);
+//   return numbers;
+// }
+// createArrayOfNumbers(1, 3);
+// createArrayOfNumbers(14, 17);
+// createArrayOfNumbers(29, 34);
+
+function filterArray(numbers, value) {
+    let compareWithOriginalNumber = [];
+    for (let i = 0; i < numbers.length; i += 1) {
+        if (numbers[i] > value)
+            compareWithOriginalNumber.push(numbers[i]);
+        console.log(compareWithOriginalNumber);
+    }
+    return compareWithOriginalNumber;
+}
+filterArray([1, 2, 3, 4, 5], 3);
+filterArray([1, 2, 3, 4, 5], 4);
+filterArray([1, 2, 3, 4, 5], 5);
+filterArray([12, 24, 8, 41, 76], 38);
+filterArray([12, 24, 8, 41, 76], 20);
