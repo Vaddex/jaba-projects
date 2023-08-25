@@ -814,17 +814,106 @@
 // createArrayOfNumbers(14, 17);
 // createArrayOfNumbers(29, 34);
 
-function filterArray(numbers, value) {
-    let compareWithOriginalNumber = [];
-    for (let i = 0; i < numbers.length; i += 1) {
-        if (numbers[i] > value)
-            compareWithOriginalNumber.push(numbers[i]);
-        console.log(compareWithOriginalNumber);
-    }
-    return compareWithOriginalNumber;
-}
-filterArray([1, 2, 3, 4, 5], 3);
-filterArray([1, 2, 3, 4, 5], 4);
-filterArray([1, 2, 3, 4, 5], 5);
-filterArray([12, 24, 8, 41, 76], 38);
-filterArray([12, 24, 8, 41, 76], 20);
+// function filterArray(numbers, value) {
+//     let compareWithOriginalNumber = [];
+//     for (let i = 0; i < numbers.length; i += 1) {
+//         if (numbers[i] > value)
+//             compareWithOriginalNumber.push(numbers[i]);
+//         console.log(compareWithOriginalNumber);
+//     }
+//     return compareWithOriginalNumber;
+// }
+// filterArray([1, 2, 3, 4, 5], 3);
+// filterArray([1, 2, 3, 4, 5], 4);
+// filterArray([1, 2, 3, 4, 5], 5);
+// filterArray([12, 24, 8, 41, 76], 38);
+// filterArray([12, 24, 8, 41, 76], 20);
+
+// function getCommonElements(array1, array2) {
+//     let newArr = [];
+//     for (let elements of array1) {
+//         array2.includes(elements) ?
+//         newArr.push(elements): 'false'
+//     }
+//     console.log(newArr);
+//     return newArr;
+// }
+// getCommonElements([1, 2, 3], [2, 4]);
+// getCommonElements([1, 2, 3], [2, 1, 17, 19]);
+// getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]);
+// getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]);
+// getCommonElements([1, 2, 3], [10, 20, 30]);
+
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//     for ( let accumulate of order) {
+//        total += accumulate;
+// }
+//     console.log(total);
+//   return total;
+// }
+// calculateTotalPrice([12, 85, 37, 4]);
+// calculateTotalPrice([164, 48, 291]);
+// calculateTotalPrice([412, 371, 94, 63, 176]);
+// calculateTotalPrice([]);
+
+// function filterArray(numbers, value) {
+//     const filteredNumbers = [];
+//     for (let someNum of numbers) {
+//         if (someNum > value) {
+//             filteredNumbers.push(someNum);
+//         }
+//     }
+//     console.log(filteredNumbers);
+//   return filteredNumbers;
+// }
+// filterArray([1, 2, 3, 4, 5], 3);
+// filterArray([1, 2, 3, 4, 5], 4);
+// filterArray([1, 2, 3, 4, 5], 5);
+// filterArray([12, 24, 8, 41, 76], 38);
+// filterArray([12, 24, 8, 41, 76], 20);
+
+// function getEvenNumbers(start, end) {
+//     let newArrr = [];
+//     for (let i = start; i <= end; i += 1) {
+//         if ( i % 2 === 0) {
+//             newArrr.push(i);
+//         }
+//     }
+//     console.log(newArrr);
+//     return newArrr;
+// }
+// getEvenNumbers(2, 5);
+// getEvenNumbers(3, 11);
+// getEvenNumbers(6, 12);
+// getEvenNumbers(8, 8);
+// getEvenNumbers(7, 7);
+
+// function findNumber(start, end, divisor) {
+//   let number;
+
+//   for (let i = start; i < end; i += 1) {
+//     if (i % divisor === 0) {
+//         number = i;
+//         console.log(number);
+//         return number;
+//     }
+//     }
+// }
+// findNumber(2, 6, 5);
+// findNumber(8, 17, 3);
+// findNumber(6, 9, 4);
+// findNumber(16, 35, 7);
+
+// function includes(array, value) {
+//     for (let i = 0; i < array.length; i += 1) {
+//         i = 'true' ? i === value : 'false'
+//         return array.indexOf(value) >= 0;
+//     }
+// }
+// includes([1, 2, 3, 4, 5], 3);
+// includes([1, 2, 3, 4, 5], 17);
+// includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter");
+// includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus");
+// includes(["apple", "plum", "pear", "orange"], "plum");
+// includes(["apple", "plum", "pear", "orange"], "kiwi");
