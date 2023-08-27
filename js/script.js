@@ -730,7 +730,7 @@
 // bar
 // baz
 
-
+// ? Practice
 // function getExtremeElements(array) {
 //     const arraylength = array.length - 1;
 //     const lastElements = array[arraylength];
@@ -917,3 +917,400 @@
 // includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus");
 // includes(["apple", "plum", "pear", "orange"], "plum");
 // includes(["apple", "plum", "pear", "orange"], "kiwi");
+
+// ! Об'єкти
+// * const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   isPublic: true,
+//   rating: 8.38,
+// };
+
+// ? Звернення до вкладених властивостей
+// const user = {
+//   name: "Jacques Gluke",
+//   tag: "jgluke",
+//   location: {
+//     country: "Jamaica",
+//     city: "Ocho Rios",
+//   },
+//   hobbies: ["swiming", "music", "sci-fi"],
+// };
+
+// const location = user.location;
+// console.log(location); // Об'єкт location
+
+// const country = user.location.country;
+// console.log(country); // 'Jamaica'
+
+// ? Звернення до властивостей через квадратні дужки
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   isPublic: true,
+//   rating: 8.38,
+// };
+
+// const bookTitle = book["title"];
+// console.log(bookTitle); // 'The Last Kingdom'
+
+// const bookGenres = book["genres"];
+// console.log(bookGenres); // ['historical prose', 'adventurs']
+
+// const propKey = "author";
+// const bookAuthor = book[propKey];
+// console.log(bookAuthor); // 'Bernard Cornwell'
+
+// ? Зміна значення властивості
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   isPublic: true,
+//   rating: 8.38,
+// };
+
+// book.rating = 9;
+// book.isPublic = false;
+// book.genres.push("драма");
+
+// console.log(book.rating); // 9
+// console.log(book.isPublic); // false
+// console.log(book.genres); // ['historical prose', 'adventures', 'драма']
+
+// ? Додавання властивостей
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   isPublic: true,
+//   rating: 8.38,
+// };
+
+// book.pageCount = 836;
+// book.originalLanguage = "en";
+// book.translations = ["ua", "lt"];
+
+// console.log(book.pageCount); // 836
+// console.log(book.originalLanguage); // 'en'
+// console.log(book.translations); // ['ua', 'lt']
+
+// ? Короткі властивості
+// ❌
+// const name = "Генрі Сибола";
+// const age = 25;
+
+// const user = {
+//   name: name,
+//   age: age,
+// };
+
+// console.log(user.name); // "Генрі Сибола"
+// console.log(user.age); // 25
+
+// ✅
+// const name = "Генрі Сибола";
+// const age = 25;
+
+// const user = {
+//   name,
+//   age,
+// };
+
+// console.log(user.name); // "Генрі Сибола"
+// console.log(user.age); // 25
+
+// ? Обчислювальні властивості
+
+// ❌
+// const propName = "name";
+// const user = {
+//   age: 25,
+// };
+
+// user[propName] = "Генрі Сибола";
+// console.log(user.name); // 'Генрі Сибола'
+
+// ✅
+// const propName = "name";
+// const user = {
+//   age: 25,
+    // Ім'я цієї властивості буде взяте зі значення змінної propName
+//   [propName]: "Генрі Сибола",
+// };
+
+// console.log(user.name); // 'Генрі Сибола'
+
+// ! Методи об'єкта
+// ✅ Логічно і синтаксично згруповані сутності
+// const bookShelf = {
+//   books: ["The Last Kingdom", "Dream Guardian"],
+    // Це метод об'єкта
+//   getBooks() {
+//     console.log("Цей метод буде повертати всі книги - властивість books");
+//   },
+    // Це метод об'єкта
+//   addBook(bookName) {
+//     console.log("Цей метод буде додавати нову книгу у властивість books");
+//   },
+// };
+// Виклики методів
+// bookShelf.getBooks();
+// bookShelf.addBook("Нова книга");
+
+// ❌ Слабкопозв'язані, незалежні сутності
+// const books = [];
+// function getBooks() {}
+// function addBook() {}
+
+// ? Доступ до властивостей об'єкта в методах
+// const bookShelf = {
+//   books: ["The Last Kingdom"],
+//   getBooks() {
+//     console.log(this);
+//   },
+// };
+// Перед крапкою знаходиться об'єкт bookShelf,
+// тому, викликаючи метод, this буде зберігати посилання на нього.
+// bookShelf.getBooks(); // {books: ['The Last Kingdom'], getBooks: f}
+
+// const bookShelf = {
+//   books: ["The Last Kingdom"],
+//   getBooks() {
+//     return this.books;
+//   },
+//   addBook(bookName) {
+//     this.books.push(bookName);
+//   },
+//   removeBook(bookName) {
+//     const bookIndex = this.books.indexOf(bookName);
+//     this.books.splice(bookIndex, 1);
+//   },
+// };
+
+// console.log(bookShelf.getBooks()); // ["The Last Kingdom"]
+// bookShelf.addBook("The Mist");
+// bookShelf.addBook("Dream Guardian");
+// console.log(bookShelf.getBooks()); // ['The Last Kingdom', 'The Mist', 'Dream Guardian']
+// bookShelf.removeBook("The Mist");
+// console.log(bookShelf.getBooks()); // ['The Last Kingdom', 'Dream Guardian']
+
+// ! Перебирання об'єкта
+// ? Цикл for...in
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   rating: 8.38,
+// };
+
+// for (const key in book) {
+    // Ключ
+//   console.log(key);
+    // Значення властивості з таким ключем
+//   console.log(book[key]);
+// }
+
+// ? Метод hasOwnProperty()
+// * Метод Object.create(animal) створює і повертає новий об'єкт, зв'язуючи його з об'єктом animal. Тому можна отримати значення властивості legs, звернувшись до нього як dog.legs, хоча він відсутній в об'єкті dog - це невласна властивість з об'єкта animal.
+// const animal = {
+//   legs: 4,
+// };
+// const dog = Object.create(animal);
+// dog.name = "Манго";
+// console.log(dog); // {name: 'Манго'}
+// console.log(dog.name); // 'Манго'
+// console.log(dog.legs); // 4
+
+// ❌ Повертає true для всіх властивостей
+// console.log("name" in dog); // true
+// console.log("legs" in dog); // true
+
+// ✅ Повертає true тільки для власних властивостей
+// console.log(dog.hasOwnProperty("name")); // true
+// console.log(dog.hasOwnProperty("legs")); // false
+
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   rating: 8.38,
+// };
+
+// for (const key in book) {
+    // Якщо це власна властивість - виконуємо тіло if
+//   if (book.hasOwnProperty(key)) {
+//     console.log(key);
+//     console.log(book[key]);
+//   }  // Якщо це невласна властивість - нічого не робимо
+// }
+
+// ? Метод Object.keys()
+// * Вбудований клас Object має декілька корисних методів для роботи з об'єктами. Перший з них - це Object.keys(obj), який приймає об'єкт і повертає масив ключів його власних властивостей. Якщо об'єкт не має властивостей, метод поверне порожній масив.
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   rating: 8.38,
+// };
+// const keys = Object.keys(book);
+// console.log(keys); // ['title', 'author', 'genres', 'rating']
+
+// * Скомбінувавши результат Object.keys() і цикл for...of, можна зручно перебрати власні властивості об'єкта, і не використовуючи архаїчний цикл for...in з перевірками належності властивостей.
+
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   rating: 8.38,
+// };
+// const keys = Object.keys(book);
+
+// for (const key of keys) {
+    // Ключ
+//   console.log(key);
+    // Значення властивості
+//   console.log(book[key]);
+// }
+
+// ? Метод Object.values()
+// * Mетод Object.values(obj) повертає масив значень його власних властивостей. Якщо в об'єкті відсутні властивості, метод Object.values(obj) поверне порожній масив.
+
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   rating: 8.38,
+// };
+// const keys = Object.keys(book);
+// console.log(keys); // ['title', 'author', 'rating']
+
+// const values = Object.values(book);
+// console.log(values); // ['The Last Kingdom', 'Bernard Cornwell', 8.38]
+
+// const goods = {
+//   apples: 6,
+//   grapes: 3,
+//   bread: 4,
+//   cheese: 7,
+// };
+
+// const values = Object.values(goods); // [6, 3, 4, 7]
+// let total = 0;
+// for (const value of values) {
+//   total += value;
+// }
+// console.log(total); // 20
+
+// ? Метод Object.entries()
+// * Метод Object.entries(obj) повертає масив записів, кожен елемент якого, буде ще один масив з 2-х елементів: імені властивості і значення цієї властивості з об'єкта obj.
+
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   rating: 8.38,
+// };
+// const keys = Object.keys(book);
+// console.log(keys); // ['title', 'author', 'rating']
+
+// const values = Object.values(book);
+// console.log(values); // ['The Last Kingdom', 'Bernard Cornwell', 8.38]
+
+// const entries = Object.entries(book);
+// console.log(entries);
+// [["title", "The Last Kingdom"], ["author", "Bernard Cornwell"], ["rating", 8.38]]
+
+// ! Масив об'єктів
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "На березі спокійних вод",
+//     author: "Роберт Шеклі",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "Сон смішної людини",
+//     author: "Федір Достоєвський",
+//     rating: 7.75,
+//   },
+// ];
+
+// for (const book of books) {
+    // Об'єкт книги
+//   console.log(book);
+    // Назва
+//   console.log(book.title);
+    // Автор
+//   console.log(book.author);
+    // Рейтинг
+//   console.log(book.rating);
+// }
+
+// let totalRating = 0;
+// for (const book of books) {
+//   totalRating += book.rating;
+// }
+// const averageRating = (totalRating / books.length).toFixed(1);
+// console.log(averageRating); // 8.2
+
+// ! Синтаксис spread і rest
+// ? spread: передача аргументів
+// * Операція ... (spread) дозволяє розподілити колекцію елементів (масив, рядок або об'єкт) в місце, в якому очікується набір окремих значень. Звичайно, існують деякі обмеження, наприклад, не можна розподілити масив в об'єкт і навпаки.
+
+// const temps = [14, -4, 25, 8, 11];
+
+// В консолі буде масив
+// console.log(temps);
+// ❌ Так не спрацює, тому що передаємо цілий масив
+// console.log(Math.max(temps)); // NaN
+
+// В консолі буде набір окремих чисел
+// console.log(...temps);
+// ✅ Розподілимо колекцію елементів у якості окремих аргументів
+// console.log(Math.max(...temps)); // 25
+
+// ? spread: створення нового масиву
+// * Операція ... (spread) дозволяє створити копію масиву або «склеїти» довільну кількість масивів в один новий. Раніше для цього використовували методи slice() і concat(), але операція розподілу дозволяє зробити те саме у коротшій формі.
+
+// const temps = [14, -4, 25, 8, 11];
+// Це точна, але незалежна копія масиву temps
+// const copyOfTemps = [...temps];
+// console.log(copyOfTemps); // [14, -4, 25, 8, 11]
+
+// const lastWeekTemps = [14, 25, 11];
+// const currentWeekTemps = [23, 17, 18];
+// const allTemps = [...lastWeekTemps, ...currentWeekTemps];
+// console.log(allTemps); // [14, 25, 11, 23, 17, 18]
+
+// ? spread: створення нового об'єкта
+// const first = { propA: 5, propB: 10 };
+// const second = { propC: 15 };
+// const third = { ...first, ...second };
+// console.log(third); // { propA: 5, propB: 10, propC: 15 }
+
+// ? rest: збирання всіх аргументів функції
+// * Операція ... (rest) дозволяє зібрати групу незалежних елементів у нову колекцію. Синтаксично - це близнюк операції розподілу, але відрізнити їх просто - розподіл - коли ... знаходиться у правій частині операції присвоювання, а збирання - коли ... знаходиться в її лівій частині.
+
+// function multiply(...args) {
+//   console.log(args); // масив усіх аргументів
+// }
+// multiply(1, 2);
+// multiply(1, 2, 3);
+// multiply(1, 2, 3, 4);
+
+// ? rest: збирання частини аргументів функції
+// * Операція ... (rest) також дозволяє зібрати в масив тільки ту частину аргументів, яка необхідна, оголосивши параметри до «збирання».
+
+// function multiply(firstNumber, secondNumber, ...otherArgs) {
+//   console.log(firstNumber); // Значення першого аргументу
+//   console.log(secondNumber); // Значення другого аргументу
+//   console.log(otherArgs); // Масив інших аргументів
+// }
+// multiply(1, 2);
+// multiply(1, 2, 3);
+// multiply(1, 2, 3, 4);
