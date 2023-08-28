@@ -1314,3 +1314,183 @@
 // multiply(1, 2);
 // multiply(1, 2, 3);
 // multiply(1, 2, 3, 4);
+
+// ? Деструктуризація об'єктів
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   isPublic: true,
+//   rating: 8.38,
+// };
+
+// Деструктуризуємо
+// const { title, author, isPublic, rating, coverImage } = book;
+// console.log(coverImage); // undefined
+
+// const accessType = isPublic ? "публічному" : "закритому";
+// const message = `Книга ${title} автора ${author} з рейтингом ${rating} знаходиться в ${accessType} доступі.`;
+
+// ? Значення за замовчуванням
+// * Для того, щоб уникнути присвоєння undefined під час деструктуризації неіснуючих властивостей об'єкта, можна задати змінним значення за замовчуванням, які будуть присвоєні лише у тому випадку, якщо об'єкт не містить властивості з таким ім'ям.
+
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+// };
+
+// Додамо зображення обкладинки, якщо воно відсутнє в об'єкті книги
+// const {
+//   title,
+//   coverImage = "https://via.placeholder.com/640/480",
+//   author,
+// } = book;
+
+// console.log(title); // The Last Kingdom
+// console.log(author); // Bernard Cornwell
+// console.log(coverImage); // https://via.placeholder.com/640/480
+
+// ? Зміна імені змінної
+// const firstBook = {
+//   title: "The Last Kingdom",
+//   coverImage:
+//     "https://images-na.ssl-images-amazon.com/images/I/51b5YG6Y1rL.jpg",
+// };
+
+// const {
+//   title: firstTitle,
+//   coverImage: firstCoverImage = "https://via.placeholder.com/640/480",
+// } = firstBook;
+
+// console.log(firstTitle); // The Last Kingdom
+// console.log(firstCoverImage); // https://images-na.ssl-images-amazon.com/images/I/51b5YG6Y1rL.jpg
+
+// const secondBook = {
+//   title: "Сон смішної людини",
+// };
+
+// const {
+//   title: secondTitle,
+//   coverImage: secondCoverImage = "https://via.placeholder.com/640/480",
+// } = secondBook;
+
+// console.log(secondTitle); // Сон смішної людини
+// console.log(secondCoverImage); // https://via.placeholder.com/640/480
+
+// ? Деструктуризація в циклах
+// ❌
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "На березі спокійних вод",
+//     author: "Роберт Шеклі",
+//     rating: 8.51,
+//   },
+// ];
+
+// for (const book of books) {
+//   console.log(book.title);
+//   console.log(book.author);
+//   console.log(book.rating);
+// }
+
+// ✅
+// for (const book of books) {
+//   const { title, author, rating } = book;
+
+//   console.log(title);
+//   console.log(author);
+//   console.log(rating);
+// }
+
+// ? Глибока деструктуризація
+// const user = {
+//   name: "Jacques Gluke",
+//   tag: "jgluke",
+//   stats: {
+//     followers: 5603,
+//     views: 4827,
+//     likes: 1308,
+//   },
+// };
+
+// const {
+//   name,
+//   tag,
+//   stats: { followers, views: userViews, likes: userLikes = 0 },
+// } = user;
+
+// console.log(name); // Jacques Gluke
+// console.log(tag); // jgluke
+// console.log(followers); // 5603
+// console.log(userViews); // 4827
+// console.log(userLikes); // 1308
+
+// ? Деструктуризація масивів
+// * Деструктуризоване присвоювання можна використовувати і для масивів, але з деякими особливостями.
+//     Замість фігурних дужок {} використовуються квадратні [].
+//     Змінним, зазначеним у квадратних дужках [], будуть послідовно присвоюватися значення елементів масиву.
+// Наприклад, є масив кольорів, з якого потрібно отримати значення кожної складової кольору в окремих змінних.
+
+// const rgb = [200, 255, 100];
+// const [red, green, blue] = rgb;
+// console.log(`R:${red},G:${green},B:${blue}`); // "R:200,G:255,B:100"
+
+// ! Патерн «Об'єкт параметрів»
+// * Якщо функція приймає більше двох-трьох аргументів, дуже просто заплутатись, в якій послідовності і що передавати. В результаті виходить дуже неочевидний код в місці її виклику.
+
+// function doStuffWithBook(title, numberOfPages, downloads, rating, public) {
+    // Робимо щось з параметрами
+//   console.log(title);
+//   console.log(numberOfPages);
+    // І так далі
+
+    // ❌ Що таке 736? Що таке 10283? Що таке true?
+// doStuffWithBook("The Last Kingdom", 736, 10283, 8.38, true);
+
+// * Патерн «Об'єкт параметрів» допомагає вирішити цю проблему, замінюючи набір параметрів всього одним об'єктом з іменованими властивостями.
+
+// function doStuffWithBook(book) {
+    // Робимо щось з властивостями об'єкта
+//   console.log(book.title);
+//   console.log(book.numberOfPages);
+    // І так далі
+// }
+
+// * У такому випадку, під час її виклику передаємо один об'єкт з необхідними властивостями.
+
+// ✅ Все зрозуміло
+// doStuffWithBook({
+//   title: "The Last Kingdom",
+//   numberOfPages: 736,
+//   downloads: 10283,
+//   rating: 8.38,
+//   isPublic: true,
+// });
+
+// * Ще один плюс у тому, що можна деструктуризувати об'єкт в параметрі book. Це можна зробити в тілі функції.
+
+// function doStuffWithBook(book) {
+//   const { title, numberOfPages, downloads, rating, isPublic } = book;
+//   console.log(title);
+//   console.log(numberOfPages);
+    // І так далі
+// }
+
+// * Або відразу в сигнатурі (підписі) функції - немає різниці.
+
+// function doStuffWithBook({
+//   title,
+//   numberOfPages,
+//   downloads,
+//   rating,
+//   isPublic,
+// }) {
+//   console.log(title);
+//   console.log(numberOfPages);
+    // І так далі
+// }
