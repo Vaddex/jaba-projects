@@ -730,7 +730,7 @@
 // bar
 // baz
 
-// ? Practice
+// ! practical tasks
 // function getExtremeElements(array) {
 //     const arraylength = array.length - 1;
 //     const lastElements = array[arraylength];
@@ -1493,4 +1493,127 @@
 //   console.log(title);
 //   console.log(numberOfPages);
     // І так далі
+// }
+
+// ! practical tasks
+// function countProps(object) {
+//   let propCount = 0;
+// for (let key in object) {
+//   if (object.hasOwnProperty(key)) {
+//       propCount += 1;
+//   }
+// }
+//     console.log(propCount);
+//     return propCount;
+// }
+// countProps({});
+// countProps({ name: 'Mango', age: 2 });
+// countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 });
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// const keys = Object.keys(apartment);
+// for (let key of keys) {
+//   values.push(apartment[key])
+// }
+
+// function countProps(object) {
+//   let propCount = 0;
+//   const allKeys = Object.keys(object)
+//   for (const key of allKeys) {
+//       propCount += 1;
+//   }
+//   return propCount;
+// }
+// countProps({});
+// countProps({ name: 'Mango', age: 2 });
+// countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 });
+
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   const salary = Object.values(salaries);
+//   for ( let key of salary) {
+//     totalSalary += key
+//     }
+//     console.log(totalSalary);
+//   return totalSalary;
+// }
+// countTotalSalary({});
+// countTotalSalary({ mango: 100, poly: 150, alfred: 80 });
+// countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 });
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+// const hexColors = [];
+// const rgbColors = [];
+// for (let key of colors) {
+//   hexColors.push(key.hex);
+//   rgbColors.push(key.rgb);
+// }
+// console.log(hexColors);
+// console.log(rgbColors);
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+// function getProductPrice(productName) {
+//     let chosenProductPrice = null;
+//     for (let key of products) {
+//         if (productName === key.name) {
+//             chosenProductPrice = key.price;
+//             break
+//         }
+//     }
+//     console.log(chosenProductPrice);
+//     return chosenProductPrice;
+// }
+// getProductPrice('Radar');
+// getProductPrice('Grip');
+// getProductPrice('Scanner');
+// getProductPrice('Droid');
+// getProductPrice('Engine');
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+// function getAllPropValues(propName) {
+//     let chosedNameArr = [];
+//     for (let key of products) {
+//         if (key[propName]) {
+//             chosedNameArr.push(key[propName]);
+//         }
+//     }
+//     console.log(chosedNameArr);
+//     return chosedNameArr;
+// }
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+// function calculateTotalPrice(productName) {
+// let totalPrice = 0;
+//   for (let key of products) {
+//     if (key.name === productName) {
+//         totalPrice = key.price * key.quantity;
+//     }
+//     }
+//     console.log(totalPrice);
+//     return totalPrice;
 // }
