@@ -1617,3 +1617,90 @@
 //     console.log(totalPrice);
 //     return totalPrice;
 // }
+
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// * destructuring
+// const {yesterday, today, tomorrow } = highTemperatures;
+// * result
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// const {
+//     yesterday,
+//     today,
+//     tomorrow,
+// * adding a default value
+//   icon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+// } = highTemperatures;
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// const {
+//     yesterday: highYesterday,
+//     today: highToday,
+//     tomorrow: highTomorrow,
+//     icon: highIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+//  } = highTemperatures;
+// const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+// const hexColors = [];
+// const rgbColors = [];
+// for (const {hex, rgb} of colors) {
+//   hexColors.push(hex);
+//   rgbColors.push(rgb);
+// }
+
+// const forecast = {
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+//   },
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+// const {
+//     today: {
+//         low: lowToday,
+//         high: highToday,
+//         icon: todayIcon = "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+//     },
+//     tomorrow: {
+//         high: highTomorrow,
+//         low: lowTomorrow,
+//         icon: tomorrowIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+//     },
+// } = forecast;
+
+// {
+//   today: { low: 10, high: 20 },
+//   tomorrow: { low: 20, high: 30 }
+// }
+function calculateMeanTemperature(forecast) {
+    const { } = forecast;
+  const todayLow = forecast.today.low;
+  const todayHigh = forecast.today.high;
+  const tomorrowLow = forecast.tomorrow.low;
+  const tomorrowHigh = forecast.tomorrow.high;
+  return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+}
