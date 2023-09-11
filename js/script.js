@@ -2795,3 +2795,379 @@ previousValue = 0
 */
 
 // * Ланцюжок методів може бути довільної довжини, але, зазвичай, не більше 2-3 операцій. По-перше, перебираючі методи використовуються для порівняно простих операцій над колекцією. По-друге, виклик кожного наступного методу - це додаткове перебирання масиву, що за великої кількості, може позначитися на продуктивності.
+
+// ! practical tasks
+// function deliverPizza(pizzaName) {
+//     return `Delivering ${pizzaName} pizza.`;
+// }
+// function makePizza(pizzaName) {
+//     return `Pizza ${pizzaName} is being prepared, please wait...`;
+// }
+// function makeMessage(pizzaName, callback) {
+//     console.log(callback(pizzaName));
+//     return callback(pizzaName);
+// }
+// makeMessage('Royal Grand', makePizza);
+// makeMessage('Ultracheese', deliverPizza);
+
+// function makePizza(pizzaName, callback) {
+//     console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+//     callback(pizzaName);
+// }
+// makePizza("Royal Grand", function deliverPizza(pizzaName) {
+//     console.log(`Delivering pizza ${pizzaName}.`);
+// });
+// makePizza("Ultracheese", function eatPizza(pizzaName) {
+//     console.log(`Eating pizza ${pizzaName}`)
+// });
+
+// const pizzaPalace = {
+//     pizzas: ["Ultracheese", "Smoked", "Four meats"],
+//     order(pizzaName, onSuccess, onError) {
+//         if (!this.pizzas.includes(pizzaName)) {
+//             console.log(onError(pizzaName));
+//             return onError(`There is no pizza with a name ${pizzaName} in the assortment.`);
+//         }
+//         console.log(onSuccess(pizzaName));
+//         return onSuccess(pizzaName);
+//   },
+// };
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//     return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+// // Callback for onError
+// function onOrderError(error) {
+//     return `Error! ${error}`;
+// }
+// pizzaPalace.order("Smoked", makePizza, onOrderError);
+// pizzaPalace.order("Four meats", makePizza, onOrderError);
+// pizzaPalace.order("Big Mike", makePizza, onOrderError);
+// pizzaPalace.order("Vienna", makePizza, onOrderError);
+
+// function calculateTotalPrice(orderedItems) {
+//     let totalPrice = 0;
+//     orderedItems.forEach((number) => {
+//         totalPrice += number;
+//     });
+//     console.log(totalPrice);
+//     return totalPrice;
+// }
+// calculateTotalPrice([12, 85, 37, 4]);
+// calculateTotalPrice([164, 48, 291]);
+// calculateTotalPrice([412, 371, 94, 63, 176]);
+
+// function filterArray(numbers, value) {
+//     const filteredNumbers = [];
+//     numbers.forEach(element => {
+//         if (element > value) {
+//             filteredNumbers.push(element);
+//         }
+//     });
+//     console.log(filteredNumbers);
+//     return filteredNumbers;
+// };
+// filterArray([1, 2, 3, 4, 5], 3);
+// filterArray([1, 2, 3, 4, 5], 4);
+// filterArray([1, 2, 3, 4, 5], 5);
+// filterArray([12, 24, 8, 41, 76], 38);
+// filterArray([12, 24, 8, 41, 76], 20);
+
+// function getCommonElements(firstArray, secondArray) {
+//   const commonElements = [];
+// //   for (let i = 0; i < firstArray.length; i += 1) {
+// //     if (secondArray.includes(firstArray[i])) {
+// //       commonElements.push(firstArray[i]);
+// //     }
+// //   }
+//     firstArray.forEach(function (element) {
+//         if (secondArray.includes(element)) {
+//             commonElements.push(element);
+//         }
+//     });
+//     console.log(commonElements);
+//     return commonElements;
+// };
+// getCommonElements([1, 2, 3], [2, 4]);
+// getCommonElements([1, 2, 3], [2, 1, 17, 19]);
+// getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]);
+// getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]);
+// getCommonElements([1, 2, 3], [10, 20, 30]);
+
+// const calculateTotalPrice = (orderedItems) => {
+//     let totalPrice = 0;
+//     orderedItems.forEach((item) => {
+//         totalPrice += item;
+//     });
+//     console.log(totalPrice);
+//     return totalPrice;
+// };
+// calculateTotalPrice([12, 85, 37, 4]);
+// calculateTotalPrice([164, 48, 291]);
+// calculateTotalPrice([412, 371, 94, 63, 176]);
+
+// const filterArray = (numbers, value) => {
+//     const filteredNumbers = [];
+//     numbers.forEach((number) => {
+//         if (number > value) {
+//             filteredNumbers.push(number);
+//         }
+//     });
+//     console.log(filteredNumbers);
+//     return filteredNumbers;
+// };
+// filterArray([1, 2, 3, 4, 5], 3);
+// filterArray([1, 2, 3, 4, 5], 4);
+// filterArray([1, 2, 3, 4, 5], 5);
+// filterArray([12, 24, 8, 41, 76], 38);
+// filterArray([12, 24, 8, 41, 76], 20);
+
+// const getCommonElements = (firstArray, secondArray) => {
+//     const commonElements = [];
+//     firstArray.forEach((element) => {
+//         if (secondArray.includes(element)) {
+//             commonElements.push(element);
+//         }
+//     });
+//     console.log(commonElements);
+//     return commonElements;
+// };
+// getCommonElements([1, 2, 3], [2, 4]);
+// getCommonElements([1, 2, 3], [2, 1, 17, 19]);
+// getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]);
+// getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]);
+// getCommonElements([1, 2, 3], [10, 20, 30]);
+
+// function changeEven (numbers, value) {
+//     const newResultArray = [];
+//     numbers.forEach(element => {
+//         if (element % 2 === 0) {
+//             newResultArray.push(element + value);
+//         } else {
+//             newResultArray.push(element);
+//         }
+//     });
+//     console.log(newResultArray);
+//     return newResultArray;
+// };
+// changeEven([1, 2, 3, 4, 5], 10);
+// changeEven([2, 8, 3, 7, 4, 6], 10);
+// changeEven([17, 24, 68, 31, 42], 100);
+// changeEven([44, 13, 81, 92, 36, 54], 100);
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// const titles = books.map(bookElament => bookElament.title);
+// console.log(titles);
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["adventure", "history"],
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     genres: ["fiction", "mysticism"],
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     genres: ["horror", "mysticism", "adventure"],
+//   },
+// ];
+// const allGenres = books.flatMap(book => book.genres);
+// console.log(allGenres);
+// const uniqueGenres = allGenres.filter((genre, index, allGenres) => allGenres.indexOf(genre) === index);
+// console.log(uniqueGenres);
+
+// const users = [
+//     {
+//         name: "Moore Hensley",
+//         email: "moorehensley@indexia.com",
+//         eyeColor: "blue",
+//         friends: ["Sharron Pace"],
+//         isActive: false,
+//         balance: 2811,
+//         gender: "male"
+//     },
+//     {
+//         name: "Sharlene Bush",
+//         email: "sharlenebush@tubesys.com",
+//         eyeColor: "blue",
+//         friends: ["Briana Decker", "Sharron Pace"],
+//         isActive: true,
+//         balance: 3821,
+//         gender: "female"
+//     },
+//     {
+//         name: "Ross Vazquez",
+//         email: "rossvazquez@xinware.com",
+//         eyeColor: "green",
+//         friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//         isActive: false,
+//         balance: 3793,
+//         gender: "male"
+//     },
+//     {
+//         name: "Elma Head",
+//         email: "elmahead@omatom.com",
+//         eyeColor: "green",
+//         friends: ["Goldie Gentry", "Aisha Tran"],
+//         isActive: true,
+//         balance: 2278,
+//         gender: "female"
+//     },
+//     {
+//         name: "Carey Barr",
+//         email: "careybarr@nurali.com",
+//         eyeColor: "blue",
+//         friends: ["Jordan Sampson", "Eddie Strong"],
+//         isActive: true,
+//         balance: 3951,
+//         gender: "male"
+//     },
+//     {
+//         name: "Blackburn Dotson",
+//         email: "blackburndotson@furnigeer.com",
+//         eyeColor: "brown",
+//         friends: ["Jacklyn Lucas", "Linda Chapman"],
+//         isActive: false,
+//         balance: 1498,
+//         gender: "male"
+//     },
+//     {
+//         name: "Sheree Anthony",
+//         email: "shereeanthony@kog.com",
+//         eyeColor: "brown",
+//         friends: ["Goldie Gentry", "Briana Decker"],
+//         isActive: true,
+//         balance: 2764,
+//         gender: "female"
+//     }
+// ];
+
+// const getUsersWithEyeColor = (users, color) => {
+//     const userEyesColors = users.filter(user => user.eyeColor === color)
+//     console.log(userEyesColors);
+//     return userEyesColors;
+// };
+
+// const getUsersWithAge = (users, minAge, maxAge) => {
+//     const averAge = users.filter(({age}) => age >= minAge && age <= maxAge)
+//     return averAge;
+// };
+
+// const getFriends = users => {
+//     const friendsAllUsers = users.flatMap(user => user.friends)
+//     const filteredFriends = friendsAllUsers.filter((friend, i, array) => friendsAllUsers.indexOf(friend) === i);
+//     return filteredFriends;
+// };
+
+// const getActiveUsers = (users) =>
+//     users.filter(user => user.isActive === true);
+
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+// ];
+// const BOOK_TITLE = 'The Dream of a Ridiculous Man';
+// const AUTHOR = 'Robert Sheckley';
+// const bookWithTitle = books.find(book => book.title === BOOK_TITLE);
+// const bookByAuthor = books.find(book => book.author === AUTHOR);
+
+// const getUserWithEmail = (users, email) => {
+//     return userWithThisEmail = users.find((user) => user.email === email);
+// };
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+
+// const eachElementInFirstIsEven = firstArray.every(number => number % 2 === 0);
+// const eachElementInFirstIsOdd = firstArray.every(number => number % 2 !== 0);
+
+// const eachElementInSecondIsEven = secondArray.every(number => number % 2 === 0);
+// const eachElementInSecondIsOdd = secondArray.every(number => number % 2 !== 0);
+
+// const eachElementInThirdIsEven = thirdArray.every(number => number % 2 === 0);
+// const eachElementInThirdIsOdd = thirdArray.every(number => number % 2 !== 0);
+
+// const isEveryUserActive = (users) => {
+//     const allUsers = users.every(user => user.isActive === true)
+//     return allUsers;
+// };
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+
+// const anyElementInFirstIsEven = firstArray.some(number => number % 2 === 0);
+// const anyElementInFirstIsOdd = firstArray.some(number => number % 2 !== 0);
+
+// const anyElementInSecondIsEven = secondArray.some(number => number % 2 === 0);
+// const anyElementInSecondIsOdd = secondArray.some(number => number % 2 !== 0);
+
+// const anyElementInThirdIsEven = thirdArray.some(number => number % 2 === 0);
+// const anyElementInThirdIsOdd = thirdArray.some(number => number % 2 !== 0);
+
+// const isAnyUserActive = users => {
+//     const returnActiveUsers = users.some(user => user.isActive === true);
+//     return returnActiveUsers;
+// };
+
+// const players = {
+//   mango: 1270,
+//   poly: 468,
+//   ajax: 710,
+//   kiwi: 244
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// const totalPlayTime = playtimes.reduce((player, time) => {
+//     return player + time
+// });
+// const averagePlayTime = totalPlayTime / playtimes.length;
+
+const players = [
+  { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+  { name: "Poly", playtime: 469, gamesPlayed: 2 },
+  { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+  { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+];
+const totalAveragePlaytimePerGame = players.reduce((firstValue, time) => {
+    const allPlayTime = players.playtime / players.gamesPlayed;
+    console.log(allPlayTime);
+    return firstValue + allPlayTime;
+}, 0);
