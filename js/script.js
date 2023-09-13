@@ -3160,14 +3160,82 @@ previousValue = 0
 // });
 // const averagePlayTime = totalPlayTime / playtimes.length;
 
-const players = [
-  { name: "Mango", playtime: 1270, gamesPlayed: 4 },
-  { name: "Poly", playtime: 469, gamesPlayed: 2 },
-  { name: "Ajax", playtime: 690, gamesPlayed: 3 },
-  { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
-];
-const totalAveragePlaytimePerGame = players.reduce((firstValue, time) => {
-    const allPlayTime = players.playtime / players.gamesPlayed;
-    console.log(allPlayTime);
-    return firstValue + allPlayTime;
-}, 0);
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+// const totalAveragePlaytimePerGame = players.reduce((firstValue, time) => {
+//     const allPlayTime = time.playtime / time.gamesPlayed;
+//     console.log(allPlayTime);
+//     return firstValue + allPlayTime;
+// }, 0);
+
+// const calculateTotalBalance = (users) => users.reduce((totalValue, user) => {
+//     return totalValue + user.balance}, 0);
+
+// const getTotalFriendCount = (users) => users.reduce((totalFriendscount, user) =>
+//     totalFriendscount + user.friends.length
+// , 0);
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+// ];
+// const ascendingReleaseDates = [...releaseDates].sort();
+// console.log(ascendingReleaseDates);
+// const alphabeticalAuthors = [...authors].sort();
+// console.log(alphabeticalAuthors);
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const ascendingReleaseDates = [...releaseDates].sort((a, b) => a - b);
+// console.log(ascendingReleaseDates);
+// const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);
+// console.log(descendingReleaseDates);
+
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+//   "Howard Lovecraft",
+// ];
+// const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+// console.log(authorsInAlphabetOrder);
+// const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
+// console.log(authorsInReversedOrder);
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// const sortedByAuthorName = [...books].sort((a, b) => a.author.localeCompare(b.author));
+// console.log(sortedByAuthorName);
+
+// const sortedByReversedAuthorName = [...books].sort((a, b) => b.author.localeCompare(a.author));
+// console.log(sortedByReversedAuthorName);
+
+// const sortedByAscendingRating = [...books].sort((a, b) => a.rating - b.rating);
+// console.log(sortedByAscendingRating);
+
+// const sortedByDescentingRating = [...books].sort((a, b) => b.rating - a.rating);
+// console.log(sortedByDescentingRating);
