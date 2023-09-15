@@ -455,7 +455,7 @@
 // console.log(anotherNumbers); // [ 21, 22, 523 ]
 // const sus = [];
 // console.log(sus.pop()); // undefined
- 
+
 // or
 // console.log(anotherNumbers.pop()); // [ 21, 22, 523 ] 523 <= повертає те що вирізали
 
@@ -538,9 +538,9 @@
 
 // ? Повернення значення
 // function multiply(x, y, z) {
-    // console.log('Код до return виконується звичайним чином');
-    // return x * y * z;
-    // console.log('Цей лог ніколи не виконається, він стоїть після return');
+// console.log('Код до return виконується звичайним чином');
+// return x * y * z;
+// console.log('Цей лог ніколи не виконається, він стоїть після return');
 // }
 // Результат роботи функції можна зберегти у змінну
 // let result = multiply(2, 3, 5);
@@ -610,23 +610,23 @@
 // withdraw(100, 300); // Операція зняття коштів проведена успішно
 
 // function withdraw(amount, balance) {
-    // Якщо умова виконується, викликається console.log
-    // і вихід із функції. Код після тіла if не виконається.
-    // if (amount === 0) {
-    //     console.log('Для проведення операції введіть суму більшу за нуль');
-    //     return;
-    // }
-    // Якщо умова першого if не виконалась, його тіло пропускається
-    // та інтерпретатор доходе до другого if.
-    // Якщо умова виконується, викликається console.log і вихід із функції.
-    // Код, що знаходиться після тіла if, не виконається.
-    // if (amount > balance) {
-    //     console.log('Недостатньо коштів на рахунку');
-    //     return;
-    // }
-    // Якщо жоден із попередніх if не виконався,
-    // інтерпретатор доходить до цього коду і виконує його.
-    // console.log('Операція зняття коштів проведена');
+// Якщо умова виконується, викликається console.log
+// і вихід із функції. Код після тіла if не виконається.
+// if (amount === 0) {
+//     console.log('Для проведення операції введіть суму більшу за нуль');
+//     return;
+// }
+// Якщо умова першого if не виконалась, його тіло пропускається
+// та інтерпретатор доходе до другого if.
+// Якщо умова виконується, викликається console.log і вихід із функції.
+// Код, що знаходиться після тіла if, не виконається.
+// if (amount > balance) {
+//     console.log('Недостатньо коштів на рахунку');
+//     return;
+// }
+// Якщо жоден із попередніх if не виконався,
+// інтерпретатор доходить до цього коду і виконує його.
+// console.log('Операція зняття коштів проведена');
 // }
 // withdraw(0, 300); // Для проведення операції введіть суму більшу за нуль
 // withdraw(500, 300); // Недостатньо коштів на рахунку
@@ -690,7 +690,7 @@
 //     }
 //     if (i === 3) {
 //         console.log(a); // 20
-        // ❌ Помилка! Змінна b - недоступна в цій області видимості
+// ❌ Помилка! Змінна b - недоступна в цій області видимості
 //         console.log(b);
 //     }
 // }
@@ -1037,7 +1037,7 @@
 // const propName = "name";
 // const user = {
 //   age: 25,
-    // Ім'я цієї властивості буде взяте зі значення змінної propName
+// Ім'я цієї властивості буде взяте зі значення змінної propName
 //   [propName]: "Генрі Сибола",
 // };
 
@@ -1047,11 +1047,11 @@
 // ✅ Логічно і синтаксично згруповані сутності
 // const bookShelf = {
 //   books: ["The Last Kingdom", "Dream Guardian"],
-    // Це метод об'єкта
+// Це метод об'єкта
 //   getBooks() {
 //     console.log("Цей метод буде повертати всі книги - властивість books");
 //   },
-    // Це метод об'єкта
+// Це метод об'єкта
 //   addBook(bookName) {
 //     console.log("Цей метод буде додавати нову книгу у властивість books");
 //   },
@@ -1107,9 +1107,9 @@
 // };
 
 // for (const key in book) {
-    // Ключ
+// Ключ
 //   console.log(key);
-    // Значення властивості з таким ключем
+// Значення властивості з таким ключем
 //   console.log(book[key]);
 // }
 
@@ -1140,7 +1140,7 @@
 // };
 
 // for (const key in book) {
-    // Якщо це власна властивість - виконуємо тіло if
+// Якщо це власна властивість - виконуємо тіло if
 //   if (book.hasOwnProperty(key)) {
 //     console.log(key);
 //     console.log(book[key]);
@@ -1169,9 +1169,9 @@
 // const keys = Object.keys(book);
 
 // for (const key of keys) {
-    // Ключ
+// Ключ
 //   console.log(key);
-    // Значення властивості
+// Значення властивості
 //   console.log(book[key]);
 // }
 
@@ -1241,13 +1241,13 @@
 // ];
 
 // for (const book of books) {
-    // Об'єкт книги
+// Об'єкт книги
 //   console.log(book);
-    // Назва
+// Назва
 //   console.log(book.title);
-    // Автор
+// Автор
 //   console.log(book.author);
-    // Рейтинг
+// Рейтинг
 //   console.log(book.rating);
 // }
 
@@ -1444,21 +1444,21 @@
 // * Якщо функція приймає більше двох-трьох аргументів, дуже просто заплутатись, в якій послідовності і що передавати. В результаті виходить дуже неочевидний код в місці її виклику.
 
 // function doStuffWithBook(title, numberOfPages, downloads, rating, public) {
-    // Робимо щось з параметрами
+// Робимо щось з параметрами
 //   console.log(title);
 //   console.log(numberOfPages);
-    // І так далі
+// І так далі
 
-    // ❌ Що таке 736? Що таке 10283? Що таке true?
+// ❌ Що таке 736? Що таке 10283? Що таке true?
 // doStuffWithBook("The Last Kingdom", 736, 10283, 8.38, true);
 
 // * Патерн «Об'єкт параметрів» допомагає вирішити цю проблему, замінюючи набір параметрів всього одним об'єктом з іменованими властивостями.
 
 // function doStuffWithBook(book) {
-    // Робимо щось з властивостями об'єкта
+// Робимо щось з властивостями об'єкта
 //   console.log(book.title);
 //   console.log(book.numberOfPages);
-    // І так далі
+// І так далі
 // }
 
 // * У такому випадку, під час її виклику передаємо один об'єкт з необхідними властивостями.
@@ -1478,7 +1478,7 @@
 //   const { title, numberOfPages, downloads, rating, isPublic } = book;
 //   console.log(title);
 //   console.log(numberOfPages);
-    // І так далі
+// І так далі
 // }
 
 // * Або відразу в сигнатурі (підписі) функції - немає різниці.
@@ -1492,7 +1492,7 @@
 // }) {
 //   console.log(title);
 //   console.log(numberOfPages);
-    // І так далі
+// І так далі
 // }
 
 // ! practical tasks
@@ -1748,7 +1748,7 @@
 //     const completed = false;
 //     const category = "General";
 //     const priority = "Normal";
-    
+
 //     const total = {
 //         category: 'General',
 //         priority: 'Normal',
@@ -3239,3 +3239,76 @@ previousValue = 0
 
 // const sortedByDescentingRating = [...books].sort((a, b) => b.rating - a.rating);
 // console.log(sortedByDescentingRating);
+
+// const sortByAscendingBalance = users => {
+//     const sortedUsers = [...users].sort((a, b) => a.balance - b.balance);
+//     return sortedUsers;
+// };
+
+// const sortByDescendingFriendCount = users => {
+//     const sortedByCount = [...users].sort((a, b) => b.friends.length - a.friends.length);
+//     return sortedByCount;
+// };
+
+// const sortByName = users => {
+//     const sortedByName = [...users].sort((a, b) => a.name.localeCompare(b.name));
+//     return sortedByName;
+// };
+
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+//   {
+//     title: 'The Dreams in the Witch House',
+//     author: 'Howard Lovecraft',
+//     rating: 8.67,
+//   },
+// ];
+// const MIN_BOOK_RATING = 8;
+// const names = [...books]
+//     .filter(user => user.rating > MIN_BOOK_RATING)
+//     .map(user => user.author)
+//     .sort((a, b) => a.localeCompare(b))
+//     console.log(names);
+//     return names;
+
+// const getNamesSortedByFriendCount = users => {
+//   const sortedByFriends = [...users]
+//     .sort((a, b) => a.friends.length - b.friends.length)
+//     .map(user => user.name);
+//   console.log(sortedByFriends);
+//   return sortedByFriends;
+// };
+
+// const getSortedFriends = users => {
+//     const uniqueFriends = [...users]
+//         .flatMap(user => user.friends)
+//         .filter((value, index, arr) => arr.indexOf(value) === index)
+//         .sort((a, b) => a.localeCompare(b))
+//     console.log(uniqueFriends);
+//     return uniqueFriends;
+// };
+
+// const getTotalBalanceByGender = (users, gender) => {
+//     const balanceOrientedByGender = [...users]
+//         .filter(({ gender: selectYourGender }) => selectYourGender === gender)
+//         .reduce((total, { balance }) => {
+//             return total + balance
+//         }, 0)
+//     console.log(balanceOrientedByGender);
+//     return balanceOrientedByGender;
+// };
