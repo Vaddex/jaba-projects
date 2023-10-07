@@ -68,6 +68,11 @@ input {
   font-size: 20px;
   text-decoration: none;
 }
+.login-form-gesign {
+  margin-top: 5%;
+  margin-left: 75%;
+  position: relative;
+}
 .nav-hedder-container {
   display: flex;
   padding: 5px 30px;
@@ -207,6 +212,8 @@ input {
   100% {
     transform: rotate(45deg);
   }
+}
+.hero-fourth-toad {
 }
 .hero-section-bg {
   background-image: url(./img/bg/main-h-bg.jpg);
