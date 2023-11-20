@@ -4755,3 +4755,24 @@ previousValue = 0
 // console.log(json); // '{"name":"Mango","age":3,"isGoodBoy":true}'
 
 // ? Результат виклику JSON.stringify — це валідний JSON (рядок), який може бути збережений у вебсховище, базу даних або переданий мережею на сервер.
+
+// ! Перетворення функцій
+
+// ? Не всі JavaScript об'єкти можуть бути перетворені один в один у JSON. Наприклад, якщо в об'єкта є методи, то при перетворенні вони будуть проігноровані та не потраплять у JSON.
+
+// const dog = {
+//   name: "Mango",
+//   age: 3,
+//   isGoodBoy: true,
+//   bark() {
+//     console.log("Woof!");
+//   },
+// };
+
+// const json = JSON.stringify(dog);
+// console.log(json); // '{"name":"Mango","age":3,"isGoodBoy":true}'
+
+// ? Також при спробі перетворити функцію у JSON результатом буде undefined.
+
+// const json = JSON.stringify(() => console.log("Well, this is awkward")); 
+// console.log(json); // undefined
