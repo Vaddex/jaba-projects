@@ -4758,7 +4758,7 @@ previousValue = 0
 
 // ! Перетворення функцій
 
-// ? Не всі JavaScript об'єкти можуть бути перетворені один в один у JSON. Наприклад, якщо в об'єкта є методи, то при перетворенні вони будуть проігноровані та не потраплять у JSON.
+// * Не всі JavaScript об'єкти можуть бути перетворені один в один у JSON. Наприклад, якщо в об'єкта є методи, то при перетворенні вони будуть проігноровані та не потраплять у JSON.
 
 // const dog = {
 //   name: "Mango",
@@ -4772,7 +4772,24 @@ previousValue = 0
 // const json = JSON.stringify(dog);
 // console.log(json); // '{"name":"Mango","age":3,"isGoodBoy":true}'
 
-// ? Також при спробі перетворити функцію у JSON результатом буде undefined.
+// * Також при спробі перетворити функцію у JSON результатом буде undefined.
 
 // const json = JSON.stringify(() => console.log("Well, this is awkward")); 
 // console.log(json); // undefined
+
+// ! Парсинг із json
+
+// ? Щоб отримати з JSON валідне JavaScript значення, його необхідно розпарсити (parse). Це операція зворотня перетворенню JavaScript об'єкта в json за допомогою методу JSON.stringify(value)
+// * Метод JSON.parse(value) приймає json, тобто рядок, і перетворює його у JavaScript дані. 
+
+// console.log(JSON.parse("5")); // 5
+// console.log(JSON.parse("false")); // false
+// console.log(JSON.parse("null")); // null
+
+// ? Якщо json описує складний тип даних, наприклад об'єкт, то в результаті отримаємо валідний об'єкт, з яким можна працювати звичайним чином.
+
+// const json = '{"name":"Mango","age":3,"isGoodBoy":true}';
+
+// const dog = JSON.parse(json);
+// console.log(dog); // {name: "Mango", age: 3, isGoodBoy: true}
+// console.log(dog.name); // "Mango"
