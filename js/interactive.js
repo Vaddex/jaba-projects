@@ -43,3 +43,20 @@ function toadBackBtn() {
     step -= 100;
     toad.style.marginLeft = `${step}px`;
 }
+
+// * interactive section form use local storage savepoint
+const formInput = document.querySelector('.jeb-text-input')
+const localStorageKey = 'teper ti podchinyaeshsya jabe'
+
+formInput.addEventListener('input', formInputHandler)
+formInput.addEventListener('submit', formSubmitHandler)
+
+function formInputHandler (evt) {
+    localStorage.setItem(localStorageKey, evt.target.value)
+}
+
+function formSubmitHandler(evt) {
+    preventDefault();
+    console.log(evt.target.elements.message.value);
+    formInput.reset() 
+}
