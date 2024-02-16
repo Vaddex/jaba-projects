@@ -213,8 +213,7 @@ input {
     transform: rotate(45deg);
   }
 }
-.hero-fourth-toad {
-}
+
 .hero-section-bg {
   background-image: url(./img/bg/main-h-bg.jpg);
   background-repeat: no-repeat;
@@ -223,6 +222,10 @@ input {
   background-color: var(--main-bg-color);
   border-radius: 20px;
   overflow: hidden;
+}
+.user-list {
+  background-color: rgba(0, 128, 128, 0.39);
+  border-radius: 30px;
 }
 .interactive-box {
   border: 2px solid #3aa480;
