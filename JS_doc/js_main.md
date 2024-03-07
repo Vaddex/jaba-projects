@@ -1,6 +1,6 @@
 # JS
 
-Chapter 1 [Змінні та типи. Основи функцій](./chapters/ch_1.md)\
+Chapter 1 [Змінні та типи. Основи функцій](./chapters/ch_1.md)
 
 Chapter 2 [Розгалуження і цикли](./chapters/ch_2.md)
 
