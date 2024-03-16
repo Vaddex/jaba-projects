@@ -8,12 +8,6 @@ function handlerSubmit(evt) {
     evt.preventDefault();
     const { email, password } = evt.currentTarget.elements;
 
-    //   const data = {
-    //     email: email.value,
-    //     password: password.value,
-    //   };
-    //   console.log(data);
-
     // ? or we can do it with another method
     const formData = new FormData(evt.currentTarget);
     const data = {};
@@ -44,81 +38,22 @@ function toadBackBtn() {
     toad.style.marginLeft = `${step}px`;
 }
 
-// * interactive section form use local storage save-point
-const formInput = document.querySelector('.jeb-text-input')
-const localStorageKey = 'teper ti podchinyaeshsya jabe'
+// test zone
+const setIntervalbtn = document.querySelector('.set_timeout_btn')
+const clearIntervalbtn = document.querySelector('.clear_timeout_btn')
+let intervalId = null;
 
-formInput.addEventListener('input', formInputHandler)
-formInput.addEventListener('submit', formSubmitHandler)
+setIntervalbtn.addEventListener('click', () => {
+    const intervalId = setInterval(() => {
+        console.log(`The Interval ID: ${intervalId}, ${Math.random()}`);
+    }, 100);
+})
 
-function formInputHandler (evt) {
-    localStorage.setItem(localStorageKey, evt.target.value)
-}
+clearIntervalbtn.addEventListener('click', () => {
+    clearInterval(intervalId);
+    console.log(`Clear interval with ID: ${intervalId}`);
+})
 
-function formSubmitHandler(evt) {
-    preventDefault();
-    console.log(evt.target.elements.message.value);
-    formInput.reset() 
-}
+const date = new Date()
 
-const fetchUsersBtn = document.querySelector(".btn");
-const userList = document.querySelector(".user-list");
-
-fetchUsersBtn.addEventListener("click", () => {
-  fetchUsers()
-    .then((users) => renderUsers(users))
-    .catch((error) => console.log(error));
-});
-
-function fetchUsers() {
-  return fetch(
-    "https://jsonplaceholder.typicode.com/users?_limit=4&_sort=name"
-  ).then((response) => {
-    if (!response.ok) {
-      throw new Error(response.status);
-    }
-    return response.json();
-  });
-}
-
-function renderUsers(users) {
-  const markup = users
-    .map((user) => {
-      return `
-          <li>
-            <p><b>Name</b>: ${user.name}</p>
-            <p><b>Email</b>: ${user.email}</p>
-            <p><b>Company</b>: ${user.company.name}</p>
-          </li>
-      `;
-    })
-    .join("");
-  userList.insertAdjacentHTML("beforeend", markup);
-}
-
-
-
-// const foo = async () => {
-// 	console.log("Before await");
-
-// 	const promiseValue = await new Promise(resolve => {
-// 		setTimeout(() => resolve(5), 2000)
-// 	});
-
-// 	console.log("After await", promiseValue);
-// };
-
-// foo(); // через 2 секунди виведеться в консоль  "After await" 5
-
-
-console.log("Before try...catch");
-
-try {
-  const result = 10 / 0;
-  console.log(result); // Цей рядок не виконається через помилку
-} catch (error) {
-  // Обробимо помилку
-  console.error(error.message);
-}
-
-console.log("After try...catch");
+console.log(date);

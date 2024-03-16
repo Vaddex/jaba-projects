@@ -119,6 +119,19 @@ input {
   }
 }
 /* main section */
+.set_timeout_btn,
+.clear_timeout_btn {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 90px;
+  margin: 40px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #fbe5f9, #d4c1d2);
+  box-shadow: 18px 18px 37px #9d8f9c,-18px -18px 37px #ffffff;
+}
+
 .container {
   max-width: 100%;
   padding: 0 15px;
